@@ -1,75 +1,124 @@
-# Step3 permission
+# Step4 Json Web Token integration
 
 Continuation of the previous topic..
 
-### Activate virtual environment
+1. Install [Simple JWT](http://getblimp.github.io/django-rest-framework-jwt/) by
+```
+sudo pipenv install djangorestframework-jwt
+```
+
+2. Run environment
 ```
 pipenv shell
 ```
 
-1. Make sure you properly installed 'rest_framework' in your django app or you might get error edit your `tutorial/api/urls.py` with
-```
-urlpatterns = [
-    ...
-    path('api-auth', include('rest_framework.urls'))
-]
-```
-
-2. Create first superuser account and type your password e.g: ***black0Z12345***
-```
-python3 manage.py createsuperuser --email admin@example.com --username admin
-```
-
-3. Start django server
-```
-python3 manage.py runserver
-```
-
-4. Click `login` and enter your created username: ***admin*** and password: ***black0Z12345***
-
-### Permissions
-> There are two common permissions that you can use in django rest framworks these are by `Individual views` or by `Global settings`
-
-Edit `tutorial/languages/views.py` and import **permissions** and below `LanguageView` class add **permission_classes = (permissions.IsAuthenticatedOrReadOnly,)**
-
-```
-# tutorial/languages/views.py
-from django.shortcuts import render
-from rest_framework import viewsets, permissions
-from .models import Language, Paradigm, Programmer
-from .serializers import LanguageSerializer, ParadigmSerializer, ProgrammerSerializer
-
-class LanguageView(viewsets.ModelViewSet):
-    queryset = Language.objects.all()
-    serializer_class = LanguageSerializer
-    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
-
-class ParadigmView(viewsets.ModelViewSet):
-    queryset = Paradigm.objects.all()
-    serializer_class = ParadigmSerializer
-
-class ProgrammerView(viewsets.ModelViewSet):
-    queryset = Programmer.objects.all()
-    serializer_class = ProgrammerSerializer
-```
-**Syntax** :
-`
-permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
-`
-
-***IsAuthenticatedOrReadOnly*** = Can view rest api even NOT AUTHENTICATED 
-            Can view form if AUTHENTICATED
-
-***IsAuthenticated*** = Can view both rest api and form if AUTHENTICATED
-
-### Global permissions under settings 
-At bottom of `tutorial/api/settings.py` add
+3. Update `REST_FRAMEWORK`
 ```
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
     )
 }
 ```
 
-Complete permissions documentation: https://www.django-rest-framework.org/api-guide/permissions/
+4. Under `tutorial/api/urls.py` import
+
+```
+...
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+```
+and update **urlpatterns** with these
+```
+urlpatterns = [
+    ...
+    path('api/token/', TokenObtainPairView.as_view()),
+    path('api/token/refresh/', TokenRefreshView.as_view())
+]
+```
+5. Testing with `postman` or any rest GUI client
+
+Providing a token
+```
+endpoint: http://127.0.0.1:8000/api/token/
+method: POST
+body:
+    form-urlencoded: 
+        username: admin, 
+        password: black0Z12345
+```
+
+it will generate `refresh` and `token` json encoded values where you can verify your generated token here: https://jwt.io/ and check `secret base64 encoded`
+
+Requesting for new token
+```
+url: http://127.0.0.1:8000/api/token/refresh/
+method: POST
+body:
+    form-urlencoded:
+        refresh: REFRESH_TOKEN
+```
+
+example of new access token:
+```
+{
+"access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTYxMzU4MTM5LCJqdGkiOiJmMTc4ZjA3Y2UzNjc0ZTllYTUyOTYyYmU1NjJhM2NiOCIsInVzZXJfaWQiOjF9.YQvnZadr4HI2AexyVnlNqlbNQxwwjALNdByYT6pPoo8"
+}
+```
+
+explanation: 
+**refresh** = You can use this to request new token incase your current `token` expires
+**token** = Access token that can use for any api endpoints
+
+After generating token you can access these api endpoints using your provided `token`
+```
+http://127.0.0.1:8000/paradigms/
+http://127.0.0.1:8000/languages/
+http://127.0.0.1:8000/programmers/
+```
+
+Diplaying sample reponse using access `token`:
+```
+url: http://127.0.0.1:8000/paradigms/
+method: GET 
+type: 
+    Autorization
+    bearer: YOUR_TOKEN
+```
+
+after sending the request you should see a response like:
+```
+{
+    "id": 1,
+    "url": "http://127.0.0.1:8000/paradigms/1/",
+    "name": "functional"
+},
+{
+    "id": 2,
+    "url": "http://127.0.0.1:8000/paradigms/2/",
+    "name": "procedural"
+},
+{
+    "id": 3,
+    "url": "http://127.0.0.1:8000/paradigms/3/",
+    "name": "object oriented"
+}
+
+```
+
+
+[Documentation for django-rest-framework-jwt](http://getblimp.github.io/django-rest-framework-jwt/)
+### Requirements
+* Python (2.7, 3.3, 3.4, 3.5)
+* Django (1.8, 1.9, 1.10)
+* Django REST Framework (3.0, 3.1, 3.2, 3.3, 3.4, 3.5)
+
+
+[Documentation for django-rest-framework-simplejwt](https://github.com/davesque/django-rest-framework-simplejwt)
+
+### Requirements
+* Python (3.5, 3.6, 3.7)
+* Django (1.11, 2.0, 2.1, 2.2)
+* Django REST Framework (3.5, 3.6, 3.7, 3.8, 3.9)
