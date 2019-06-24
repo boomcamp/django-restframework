@@ -30,7 +30,7 @@ python3 manage.py runserver
 ### Permissions
 > There are two common permissions that you can use in django rest framworks these are by `Individual views` or by `Global settings`
 
-Edit `tutorial/languages/views.py` and add **permissions** and **permission_classes = (permissions.IsAuthenticatedOrReadOnly,)**
+Edit `tutorial/languages/views.py` and import **permissions** and below `LanguageView` class add **permission_classes = (permissions.IsAuthenticatedOrReadOnly,)**
 
 ```
 # tutorial/languages/views.py
