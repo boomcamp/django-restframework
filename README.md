@@ -1,128 +1,75 @@
-# Django Tutorial 1(Django rest framework sample)
-> Simple setup and demonstration using `django restframework` and `pipenv` environment
+# Step3 permission
 
-### Create project folder
-```
-mkdir tutorial
-cd tutorial
-```
-
-### Install packages usinng **pipenv**
-```
-pipenv install django
-pipenv install djangorestframework
-```
-
-### Start api project
-```
-django-admin startproject api .
-```
-
-### Create app 
-```
-django-admin startapp languages
-```
-
-### Create this two files under tutorial/languages/
-```
-touch serializers.py urls.py 
-```
+Continuation of the previous topic..
 
 ### Activate virtual environment
 ```
 pipenv shell
 ```
 
-### tutorial/api/settings.py
+1. Make sure you properly installed 'rest_framework' in your django app or you might get error edit your `tutorial/api/urls.py` with
 ```
-INSTALLED_APPS = [
-     ...
-    'rest_framework',
-    'languages'
+urlpatterns = [
     ...
-]
-```
-### tutorial/languages/models.py
-```
-from django.db import models
-
-class Language(models.Model):
-    name = models.CharField(max_length=50)
-    paradigm = models.CharField(max_length=50)
-
-    def __str__(self):
-        return self.name
-```
-
-### tutorial/languages/serializers.py
-```
-from rest_framework import serializers
-from .models import Language
-
-class LanguageSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = Language
-        fields = ('id', 'url', 'name', 'paradigm')
-```
-
-### tutorial/languages/urls.py
-```
-from django.urls import path, include
-from . import views 
-from rest_framework import routers 
-
-router = routers.DefaultRouter()
-router.register('languages', views.LanguageView)
-
-urlpatterns = [
-    path('', include(router.urls))
+    path('api-auth', include('rest_framework.urls'))
 ]
 ```
 
-### tutorial/languages/views.py
+2. Create first superuser account and type your password e.g: ***black0Z12345***
 ```
-from django.shortcuts import render
-from rest_framework import viewsets
-from .models import Language
-from .serializers import LanguageSerializer
-
-class LanguageView(viewsets.ModelViewSet):
-    queryset = Language.objects.all()
-    serializer_class = LanguageSerializer
+python3 manage.py createsuperuser --email admin@example.com --username admin
 ```
 
-### tutorial/api/urls.py
-> I import ***include*** and added the `path('', include('languages.urls'))` under ***urlpatterns***
-```
-from django.contrib import admin
-from django.urls import path, include
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('languages.urls'))
-]
-```
-
-### Create migrations first 
-```
-python3 manage.py makemigrations
-```
-
-### Create tables
-```
-python3 manage.py migrate
-```
-
-## Lastly serve at http://127.0.0.1:8000/
+3. Start django server
 ```
 python3 manage.py runserver
 ```
 
+4. Click `login` and enter your created username: ***admin*** and password: ***black0Z12345***
 
-# References and Tutorials for more advance tutorials about JWT, Table joining etc.
----
-[Django Restframework serializes](https://www.django-rest-framework.org/tutorial/quickstart/#serializers)
+### Permissions
+> There are two common permissions that you can use in django rest framworks these are by `Individual views` or by `Global settings`
 
-[pipenv installation](https://hackernoon.com/reaching-python-development-nirvana-bb5692adf30c)
+Edit `tutorial/languages/views.py` and add **permissions** and **permission_classes = (permissions.IsAuthenticatedOrReadOnly,)**
 
-[Python and Django Restframeworks](https://www.youtube.com/channel/UC-QDfvrRIDB6F0bIO4I4HkQ/videos)
+```
+# tutorial/languages/views.py
+from django.shortcuts import render
+from rest_framework import viewsets, permissions
+from .models import Language, Paradigm, Programmer
+from .serializers import LanguageSerializer, ParadigmSerializer, ProgrammerSerializer
+
+class LanguageView(viewsets.ModelViewSet):
+    queryset = Language.objects.all()
+    serializer_class = LanguageSerializer
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+
+class ParadigmView(viewsets.ModelViewSet):
+    queryset = Paradigm.objects.all()
+    serializer_class = ParadigmSerializer
+
+class ProgrammerView(viewsets.ModelViewSet):
+    queryset = Programmer.objects.all()
+    serializer_class = ProgrammerSerializer
+```
+**Syntax** :
+`
+permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
+`
+
+***IsAuthenticatedOrReadOnly*** = Can view rest api even NOT AUTHENTICATED 
+            Can view form if AUTHENTICATED
+
+***IsAuthenticated*** = Can view both rest api and form if AUTHENTICATED
+
+### Global permissions under settings 
+At bottom of `tutorial/api/settings.py` add
+```
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    )
+}
+```
+
+Complete permissions documentation: https://www.django-rest-framework.org/api-guide/permissions/
