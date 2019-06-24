@@ -12,7 +12,7 @@ sudo pipenv install djangorestframework-jwt
 pipenv shell
 ```
 
-3. Update `REST_FRAMEWORK`
+3. Update `REST_FRAMEWORK` under `tutorial/api/settings.py`
 ```
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
