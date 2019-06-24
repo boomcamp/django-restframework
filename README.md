@@ -1,4 +1,7 @@
-Continuation... from previous code please update the following.
+# Step2 basic ORM
+-- 
+
+Continuation of the previous topic
 
 ## tutorial/languages/models.py
 ```
