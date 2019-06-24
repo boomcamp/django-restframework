@@ -1,6 +1,8 @@
 # Django Tutorial 1(Django rest framework sample)
 > Simple setup and demonstration using `django restframework` and `pipenv` environment
 
+## Step1 the basics
+
 ### Create project folder
 ```
 mkdir tutorial
