@@ -6,40 +6,40 @@
 First we need to make sure that we already installed `pipenv` you can find setup procedures for pipenv here https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3
 
 
-### Create our Project folder.
+1. Create our Project folder.
 
 ```
 mkdir tutorial
 cd tutorial
 ```
 
-### Install packages `django` and `djangorestframework` using **pipenv**.
+2. Install `django` and `djangorestframework` packages using **pipenv**.
 ```
 pipenv install django
 pipenv install djangorestframework
 ```
 
-### Using `django-admin` create project folder called `api`.
+3. Using `django-admin` create a project folder called `api`.
 ```
 django-admin startproject api .
 ```
 
-### Next is creating `languages` app. 
+4. Next is creating `languages` app. 
 ```
 django-admin startapp languages
 ```
 
-### Create this two files under `tutorial/languages/`
+5. Create this two files(`serializers.py, urls.py`) under `tutorial/languages/`
 ```
 touch serializers.py urls.py 
 ```
 
-### Activate virtual environment
+6. Activate virtual environment.
 ```
 pipenv shell
 ```
 
-### tutorial/api/`settings.py`
+7. Add these `rest_framework,languages` into `INSTALLED_APPS` under tutorial/api/`settings.py`.
 ```
 INSTALLED_APPS = [
      ...
@@ -48,7 +48,8 @@ INSTALLED_APPS = [
     ...
 ]
 ```
-### tutorial/languages/`models.py`
+
+8. tutorial/languages/`models.py`
 ```
 from django.db import models
 
@@ -60,7 +61,7 @@ class Language(models.Model):
         return self.name
 ```
 
-### tutorial/languages/`serializers.py`
+9. tutorial/languages/`serializers.py`.
 ```
 from rest_framework import serializers
 from .models import Language
@@ -71,7 +72,7 @@ class LanguageSerializer(serializers.HyperlinkedModelSerializer):
         fields = ('id', 'url', 'name', 'paradigm')
 ```
 
-### tutorial/languages/`urls.py`
+10. tutorial/languages/`urls.py`.
 ```
 from django.urls import path, include
 from . import views 
@@ -85,7 +86,7 @@ urlpatterns = [
 ]
 ```
 
-### tutorial/languages/`views.py`
+11. tutorial/languages/`views.py`.
 ```
 from django.shortcuts import render
 from rest_framework import viewsets
@@ -97,8 +98,8 @@ class LanguageView(viewsets.ModelViewSet):
     serializer_class = LanguageSerializer
 ```
 
-### tutorial/api/`urls.py`
-> I import ***include*** and added the `path('', include('languages.urls'))` under ***urlpatterns***
+12. tutorial/api/`urls.py`.
+I have import ***include*** and added `path('', include('languages.urls'))` under ***urlpatterns***
 ```
 from django.contrib import admin
 from django.urls import path, include
@@ -109,12 +110,12 @@ urlpatterns = [
 ]
 ```
 
-### Create initial migration. 
+13. Create initial migration. 
 ```
 python3 manage.py makemigrations
 ```
 
-### Create the tables
+14. Create the tables.
 ```
 python3 manage.py migrate
 ```
