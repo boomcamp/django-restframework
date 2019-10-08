@@ -6,7 +6,8 @@ What is **ORM** = Object-relational mapping (ORM) is a programming technique in 
 
 Below are example of an ORM.
 
-1. tutorial/languages/`models.py`.
+1. Update tutorial/languages/`models.py` with the code below.
+
 ```
 from django.db import models
 
@@ -32,7 +33,8 @@ class Programmer(models.Model):
         return self.name
 ```
 
-2. tutorial/languages/`serializers.py`.
+2. Update tutorial/languages/`serializers.py` with the code below.
+
 ```
 from rest_framework import serializers
 from .models import Language, Paradigm, Programmer
@@ -54,7 +56,8 @@ class ProgrammerSerializer(serializers.HyperlinkedModelSerializer):
 ```
 
 
-3. tutorial/languages/`urls.py`
+3. Update tutorial/languages/`urls.py` with the code below.
+
 ```
 from django.urls import path, include
 from . import views 
@@ -70,7 +73,8 @@ urlpatterns = [
 ]
 ```
 
-4. tutorial/languages/`views.py`.
+4. Update tutorial/languages/`views.py` with the code below.
+
 ```
 from django.shortcuts import render
 from rest_framework import viewsets
@@ -91,16 +95,65 @@ class ProgrammerView(viewsets.ModelViewSet):
 ```
 
 6. Re-update migrate tables and serve.
+
 ```
 python3 manage.py makemigrations
 python3 manage.py migrate 
 python3 manage.py runserver
 ```
 
+Output: 
+
+```
+(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python3 manage.py makemigrations
+Migrations for 'languages':
+  languages/migrations/0002_auto_20191008_0906.py
+    - Create model Paradigm
+    - Alter field paradigm on language
+    - Create model Programmer
+
+(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python3 manage.py migrate 
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, languages, sessions
+Running migrations:
+  Applying languages.0002_auto_20191008_0906... OK
+
+
+(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python3 manage.py runserver
+Watching for file changes with StatReloader
+Performing system checks...
+
+System check identified no issues (0 silenced).
+October 08, 2019 - 09:07:17
+Django version 2.2.6, using settings 'api.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+```
+
 7. You can insert new records in this sequence.
+
 ```
 paradigms > languages > programmers
 ```
 
+Root 
+
+![alt text](root.png)
+
+Paradigms 
+
+![alt text](paradigm-list.png)
+
+Languages 
+
+![alt text](language-list.png)
+
+Programmers
+
+![alt text](programmer-list.png)
+
+
+
 ### Resources ORM
+
 [Django ORM Relationships Cheat Sheet](https://hackernoon.com/django-orm-relationships-cheat-sheet-14433d6cf68c)
