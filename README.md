@@ -13,17 +13,17 @@ Some reasons you might want to use REST framework:
 
 Tutorial branches:
 
-```
-step1-basics = Creating tutorial folder and setting up virtual environment with pipenv, django and djangorestframework installation, creating api app
 
-step2-simple-orm = Basic ORM template Language, Paradigm, Programmer model serializers, url, views creating basic table
+1. **step1-basics** = Creating tutorial folder and setting up virtual environment with pipenv, django and djangorestframework installation, creating api app.
 
-step3-permissions = Adding permissions.IsAuthenticatedOrReadOnly languages/views.py
+2. **step2-simple-orm** = Basic ORM template Language, Paradigm, Programmer model serializers, url, views creating basic table
 
-step4-jwt = Generating and Securing api, adding rest_framework_simplejwt.authentication.JWTAuthentication to REST_FRAMEWORK, importing TokenObtainPairView, TokenRefreshView to tutorial/api/urls.py
+3. **step3-permissions** = Adding permissions.IsAuthenticatedOrReadOnly languages/views.py.
 
-step5-tutorial = Done
-```
+4. **step4-jwt** = Generating and Securing api, adding rest_framework_simplejwt.authentication.JWTAuthentication to REST_FRAMEWORK, importing TokenObtainPairView, TokenRefreshView to tutorial/api/urls.py.
+
+5. **step5-tutorial** = Done.
+
 
 If havent configured environment : https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3
 
