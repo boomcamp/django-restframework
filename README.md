@@ -1,4 +1,4 @@
-# Step3 - Permissions
+# Step-3 - Permissions
 
 **Django permissions** = Django comes with a simple permissions system. It provides a way to assign permissions to specific users and groups of users.
 
