@@ -2,12 +2,15 @@
 
 Continuation of the previous topic..
 
-### Activate virtual environment
+First make sure you properly installed 'rest_framework' in your django app or you might get error 
+
+Activate virtual environment.
+
 ```
 pipenv shell
 ```
 
-1. Make sure you properly installed 'rest_framework' in your django app or you might get error edit your `tutorial/api/urls.py` with
+1. Update your `tutorial/api/urls.py` with the following.
 ```
 urlpatterns = [
     ...
@@ -15,22 +18,27 @@ urlpatterns = [
 ]
 ```
 
-2. Create first superuser account and type your password e.g: ***black0Z12345***
+2. Create superuser account.
+
 ```
 python3 manage.py createsuperuser --email admin@example.com --username admin
 ```
+after that it will ask to enter password.
 
-3. Start django server
+3. Start django server.
+
 ```
 python3 manage.py runserver
 ```
+it will serve `http://127.0.0.1:8000/`
 
-4. Click `login` and enter your created username: ***admin*** and password: ***black0Z12345***
+4. Click `login` and enter your credentials.
 
 ### Permissions
-> There are two common permissions that you can use in django rest framworks these are by `Individual views` or by `Global settings`
 
-Edit `tutorial/languages/views.py` and import **permissions** and below `LanguageView` class add **permission_classes = (permissions.IsAuthenticatedOrReadOnly,)**
+There are two common permissions that you can use in django rest framworks these are by `Individual views` or by `Global settings`
+
+Update `tutorial/languages/views.py` and import **permissions** and below `LanguageView` class add **permission_classes = (permissions.IsAuthenticatedOrReadOnly,)**
 
 ```
 # tutorial/languages/views.py
@@ -52,6 +60,7 @@ class ProgrammerView(viewsets.ModelViewSet):
     queryset = Programmer.objects.all()
     serializer_class = ProgrammerSerializer
 ```
+
 **Syntax** :
 `
 permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
@@ -62,8 +71,9 @@ permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 
 ***IsAuthenticated*** = Can view both rest api and form if AUTHENTICATED
 
-### Global permissions under settings 
-At bottom of `tutorial/api/settings.py` add
+### Global permissions under settings.
+
+At the bottom of `tutorial/api/settings.py` add
 ```
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
