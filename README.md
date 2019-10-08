@@ -11,6 +11,6 @@ step4-jwt
 step5-tutorial(Done)
 ```
 
-Basic Environment Setup : https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3
+If havent configured environment : https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3
 
 
