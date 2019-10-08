@@ -2,7 +2,7 @@
 
 Continuation of the previous topic
 
-## tutorial/languages/models.py
+1. tutorial/languages/`models.py`.
 ```
 from django.db import models
 
@@ -28,7 +28,7 @@ class Programmer(models.Model):
         return self.name
 ```
 
-## tutorial/languages/serializers.py
+2. tutorial/languages/`serializers.py`.
 ```
 from rest_framework import serializers
 from .models import Language, Paradigm, Programmer
@@ -50,7 +50,7 @@ class ProgrammerSerializer(serializers.HyperlinkedModelSerializer):
 ```
 
 
-## tutorial/languages/urls.py
+3. tutorial/languages/`urls.py`
 ```
 from django.urls import path, include
 from . import views 
@@ -66,7 +66,7 @@ urlpatterns = [
 ]
 ```
 
-## tutorial/languages/views.py
+4. tutorial/languages/`views.py`.
 ```
 from django.shortcuts import render
 from rest_framework import viewsets
@@ -86,14 +86,17 @@ class ProgrammerView(viewsets.ModelViewSet):
     serializer_class = ProgrammerSerializer
 ```
 
-## Update tables
+6. Re-update migrate tables and serve.
 ```
 python3 manage.py makemigrations
 python3 manage.py migrate 
 python3 manage.py runserver
 ```
-## Insert record in this sequence
-paradigms > languages > programmers
 
-## Resources ORM
+7. You can insert new records in this sequence.
+```
+paradigms > languages > programmers
+```
+
+### Resources ORM
 [Django ORM Relationships Cheat Sheet](https://hackernoon.com/django-orm-relationships-cheat-sheet-14433d6cf68c)
