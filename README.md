@@ -1,13 +1,19 @@
-# Step4 Json Web Token integration
+# Step4 - Json Web Token
 
-Continuation of the previous topic..
+What is JSON Web Token?
 
-1. Install [Simple JWT](http://getblimp.github.io/django-rest-framework-jwt/) by
+JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
+
+Source : https://jwt.io/
+
+1. We need to install `djangorestframework-jwt` library into our virtual environment.
+
 ```
 pipenv install djangorestframework-jwt
 ```
 
-2. Run virtual environment.
+2. Re-run virtual environment.
+
 ```
 pipenv shell
 ```
