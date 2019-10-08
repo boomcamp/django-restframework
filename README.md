@@ -30,13 +30,15 @@ python3 manage.py runserver
 
 4. Navigate to `http://127.0.0.1:8000/admin/` and enter your created login credentials.
 
-Login 
+Login Panel
 
-Screenshot1 - TODO
+![alt text](admin-login.png)
 
 Admin Dashboard 
 
-Screenshot 2 - TODO
+![alt text](admin-dashboard.png)
+
+
 
 ### Permissions
 
@@ -46,7 +48,7 @@ There are two common permissions that you can use in django rest framwork.
 
 2. Global settings = TODO
 
-Update `tutorial/languages/views.py` and import **permissions** and below `LanguageView` class add **permission_classes = (permissions.IsAuthenticatedOrReadOnly,)**
+Update `tutorial/languages/views.py` import `permissions` and below class `LanguageView` add **permission_classes = (permissions.IsAuthenticatedOrReadOnly,)**
 
 ```
 # tutorial/languages/views.py
