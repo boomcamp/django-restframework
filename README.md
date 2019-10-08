@@ -2,15 +2,10 @@
 
 **Django permissions** = Django comes with a simple permissions system. It provides a way to assign permissions to specific users and groups of users.
 
-First make sure that 'rest_framework' was properly installed in your django app.
-
-Activate virtual environment.
-
-```
-pipenv shell
-```
+First make sure that your virtual environment is active : `pipenv shell`.
 
 1. Update your `tutorial/api/urls.py` with the following.
+
 ```
 urlpatterns = [
     ...
@@ -21,22 +16,35 @@ urlpatterns = [
 2. Create superuser account.
 
 ```
-python3 manage.py createsuperuser --email admin@example.com --username admin
+(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python3 manage.py createsuperuser --email admin@example.com --username admin
+Password: 
+Password (again): 
+Superuser created successfully.
 ```
-after that it will ask to enter password.
 
 3. Start django server.
 
 ```
 python3 manage.py runserver
 ```
-it will serve `http://127.0.0.1:8000/`
 
-4. Click `login` and enter your credentials.
+4. Navigate to `http://127.0.0.1:8000/admin/` and enter your created login credentials.
+
+Login 
+
+Screenshot1 - TODO
+
+Admin Dashboard 
+
+Screenshot 2 - TODO
 
 ### Permissions
 
-There are two common permissions that you can use in django rest framworks these are by `Individual views` or by `Global settings`
+There are two common permissions that you can use in django rest framwork. 
+
+1. Individual views = TODO 
+
+2. Global settings = TODO
 
 Update `tutorial/languages/views.py` and import **permissions** and below `LanguageView` class add **permission_classes = (permissions.IsAuthenticatedOrReadOnly,)**
 
@@ -61,13 +69,14 @@ class ProgrammerView(viewsets.ModelViewSet):
     serializer_class = ProgrammerSerializer
 ```
 
-Example of Django permissions.
+Example of permission's that we can integrate to our application.
 
-1. **IsAuthenticatedOrReadOnly** = Can view rest api even NOT AUTHENTICATED Can view form if AUTHENTICATED
+1. **IsAuthenticatedOrReadOnly** = Can view rest api even NOT AUTHENTICATED Can view form if AUTHENTICATED.
 
-2. **IsAuthenticated** = Can view both rest api and form if AUTHENTICATED
+2. **IsAuthenticated** = Can view both rest api and form if AUTHENTICATED.
 
-Basic syntax : `permission_classes = (permissions.IsAuthenticatedOrReadOnly,)`.
+
+Syntax : `permission_classes = (permissions.IsAuthenticatedOrReadOnly,)`.
 
 You can also set `global` permissions under `tutorial/api/settings.py` like example below.
 
