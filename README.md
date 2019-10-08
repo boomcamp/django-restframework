@@ -2,6 +2,10 @@
 
 Continuation of the previous topic
 
+What is **ORM** = Object-relational mapping (ORM) is a programming technique in which a metadata descriptor is used to `connect object code` to a `relational database`.
+
+Below are example of an ORM.
+
 1. tutorial/languages/`models.py`.
 ```
 from django.db import models
