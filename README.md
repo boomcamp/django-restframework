@@ -1,8 +1,8 @@
-# Step3 permission
+# Step3 - Permissions
 
-Continuation of the previous topic..
+**Django permissions** = Django comes with a simple permissions system. It provides a way to assign permissions to specific users and groups of users.
 
-First make sure you properly installed 'rest_framework' in your django app or you might get error 
+First make sure that 'rest_framework' was properly installed in your django app.
 
 Activate virtual environment.
 
@@ -61,19 +61,16 @@ class ProgrammerView(viewsets.ModelViewSet):
     serializer_class = ProgrammerSerializer
 ```
 
-**Syntax** :
-`
-permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
-`
+Example of Django permissions.
 
-***IsAuthenticatedOrReadOnly*** = Can view rest api even NOT AUTHENTICATED 
-            Can view form if AUTHENTICATED
+1. **IsAuthenticatedOrReadOnly** = Can view rest api even NOT AUTHENTICATED Can view form if AUTHENTICATED
 
-***IsAuthenticated*** = Can view both rest api and form if AUTHENTICATED
+2. **IsAuthenticated** = Can view both rest api and form if AUTHENTICATED
 
-### Global permissions under settings.
+Basic syntax : `permission_classes = (permissions.IsAuthenticatedOrReadOnly,)`.
 
-At the bottom of `tutorial/api/settings.py` add
+You can also set `global` permissions under `tutorial/api/settings.py` like example below.
+
 ```
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
