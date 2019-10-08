@@ -1,4 +1,4 @@
-# Step4 - Json Web Token
+# Step-4 - Json Web Token
 
 What is JSON Web Token?
 
