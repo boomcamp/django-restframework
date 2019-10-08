@@ -1,4 +1,4 @@
-# Django, Django-restframework Introduction
+# Introduction to Django-restframework
 
 Django REST framework is a powerful and flexible toolkit for building Web APIs.
 
@@ -26,4 +26,5 @@ If havent configured environment : https://github.com/boomcamp/setup-pip-pipenv-
 Official documentation:
 
 [Django](https://www.djangoproject.com/)
+
 [Django Restframework](https://www.django-rest-framework.org/)
