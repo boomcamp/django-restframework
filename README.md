@@ -16,28 +16,28 @@ mkdir tutorial && cd tutorial
 pipenv install django djangorestframework
 ```
 
-3. Using `django-admin` create a project folder called `api`. it will be our base directory project.
+3. Activate virtual environment.
+
+```
+pipenv shell
+```
+
+4. Using `django-admin` create a project folder called `api`. it will be our base directory project.
 
 ```
 django-admin startproject api .
 ```
 
-4. Next is creating `languages` app. 
+5. Next is creating `languages` app. 
 
 ```
 django-admin startapp languages
 ```
 
-5. Create this two files(`serializers.py, urls.py`) under `tutorial/languages/`.
+6. Create this two files(`serializers.py, urls.py`) under `tutorial/languages/`.
 
 ```
 touch serializers.py urls.py 
-```
-
-6. Activate virtual environment.
-
-```
-pipenv shell
 ```
 
 7. Add these `rest_framework,languages` into `INSTALLED_APPS` under tutorial/api/`settings.py`.
