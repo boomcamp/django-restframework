@@ -1,8 +1,8 @@
 # Django Tutorial 1
 
-Basic setup and installation using `django`, `django restframework` using `pipenv` environment.
+Basic environment using `pipenv` with `django` and `django restframework`.
 
-First we need to make sure that we already installed `pipenv` in out development machine, you can find setup procedures for pipenv here https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3.
+Before we get started, we need to make sure that `pipenv` already installed in our development machines, you can find setup procedures for pipenv here https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3.
 
 1. Create our Project folder called `tutorial`.
 
@@ -10,14 +10,14 @@ First we need to make sure that we already installed `pipenv` in out development
 mkdir tutorial && cd tutorial
 ```
 
-2. Install `django` and `djangorestframework` packages using **pipenv**.
+2. Install `django` and `djangorestframework` packages using `pipenv`.
 
 ```
 pipenv install django
 pipenv install djangorestframework
 ```
 
-3. Using `django-admin` create a project folder called `api`.
+3. Using `django-admin` create a project folder called `api`. it will be our base directory project.
 
 ```
 django-admin startproject api .
