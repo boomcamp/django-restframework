@@ -13,8 +13,7 @@ mkdir tutorial && cd tutorial
 2. Install `django` and `djangorestframework` packages using `pipenv`.
 
 ```
-pipenv install django
-pipenv install djangorestframework
+pipenv install django djangorestframework
 ```
 
 3. Using `django-admin` create a project folder called `api`. it will be our base directory project.
