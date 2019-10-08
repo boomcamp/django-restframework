@@ -1,6 +1,8 @@
-# Django Tutorial 1 - Basic setup and installation using `django`, `django restframework` using `pipenv` environment.
+# Django Tutorial 1
 
-First we need to make sure that we already installed `pipenv` you can find setup procedures for pipenv here https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3
+Basic setup and installation using `django`, `django restframework` using `pipenv` environment.
+
+First we need to make sure that we already installed `pipenv` in out development machine, you can find setup procedures for pipenv here https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3.
 
 1. Create our Project folder called `tutorial`.
 
@@ -116,7 +118,9 @@ urlpatterns = [
 ]
 ```
 
-13. Create initial migration. 
+13. Create the initial migration. 
+
+By default, the configuration uses `SQLite`.
 
 ```
 python3 manage.py makemigrations
