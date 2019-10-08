@@ -1,4 +1,4 @@
-# Step2 basic ORM
+# Step-2 basic ORM
 
 Continuation of the previous topic
 
