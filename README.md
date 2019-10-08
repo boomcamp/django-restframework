@@ -192,7 +192,9 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
-Result : 
+Result : (Root page)
+
+![Django Root page](root.png)
 
 
 ### References and Tutorials for more advance tutorials about JWT, Table joining etc.
