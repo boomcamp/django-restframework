@@ -34,10 +34,25 @@ django-admin startproject api .
 django-admin startapp languages
 ```
 
+Output :
+
+```
+(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ ls
+api  languages  manage.py  Pipfile  Pipfile.lock
+```
+
 6. Create this two files(`serializers.py, urls.py`) under `tutorial/languages/`.
 
 ```
 touch serializers.py urls.py 
+```
+
+Output:
+
+```
+(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial/languages$ ls
+admin.py  apps.py  __init__.py  migrations  models.py  serializers.py  tests.py  urls.py  views.py
+
 ```
 
 7. Add these `rest_framework,languages` into `INSTALLED_APPS` under tutorial/api/`settings.py`.
