@@ -4,15 +4,15 @@ Continuation of the previous topic..
 
 1. Install [Simple JWT](http://getblimp.github.io/django-rest-framework-jwt/) by
 ```
-sudo pipenv install djangorestframework-jwt
+pipenv install djangorestframework-jwt
 ```
 
-2. Run environment
+2. Run virtual environment.
 ```
 pipenv shell
 ```
 
-3. Update `REST_FRAMEWORK` under `tutorial/api/settings.py`
+3. Update `REST_FRAMEWORK` under `tutorial/api/settings.py`.
 ```
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
@@ -24,13 +24,13 @@ REST_FRAMEWORK = {
 }
 ```
 
-4. Under `tutorial/api/urls.py` import
+4. Under `tutorial/api/urls.py` import.
 
 ```
 ...
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 ```
-and update **urlpatterns** with these
+and update **urlpatterns** with these code.
 ```
 urlpatterns = [
     ...
@@ -38,7 +38,8 @@ urlpatterns = [
     path('api/token/refresh/', TokenRefreshView.as_view())
 ]
 ```
-5. Testing with `postman` or any rest GUI client
+
+5. You can now test it with `postman` or any rest GUI client.
 
 Providing a token
 ```
@@ -50,7 +51,7 @@ body:
         password: black0Z12345
 ```
 
-it will generate `refresh` and `token` json encoded values where you can verify your generated token here: https://jwt.io/ and check `secret base64 encoded`
+It will generate `refresh` and `token` json encoded values where you can verify your generated token here: https://jwt.io/ and check `secret base64 encoded`
 
 Requesting for new token
 ```
@@ -62,6 +63,7 @@ body:
 ```
 
 example of new access token:
+
 ```
 {
 "access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTYxMzU4MTM5LCJqdGkiOiJmMTc4ZjA3Y2UzNjc0ZTllYTUyOTYyYmU1NjJhM2NiOCIsInVzZXJfaWQiOjF9.YQvnZadr4HI2AexyVnlNqlbNQxwwjALNdByYT6pPoo8"
@@ -72,7 +74,8 @@ explanation:
 **refresh** = You can use this to request new token incase your current `token` expires
 **token** = Access token that can use for any api endpoints
 
-After generating token you can access these api endpoints using your provided `token`
+After generating token you can access these api endpoints using your provided `token`.
+
 ```
 http://127.0.0.1:8000/paradigms/
 http://127.0.0.1:8000/languages/
