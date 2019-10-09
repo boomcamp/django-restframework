@@ -36,7 +36,9 @@ Tutorial branches:
 6. **[step6: Rest swagger](https://github.com/boomcamp/django-restframework/tree/step6-rest-swagger)** = Swagger api documentation.
 
 
-Start: [step1: The basics](https://github.com/boomcamp/django-restframework/tree/step1-basics)
+### Start
+
+[step1: The basics](https://github.com/boomcamp/django-restframework/tree/step1-basics)
 
 
 
