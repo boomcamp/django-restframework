@@ -1,5 +1,7 @@
 # Step-4 - Json Web Token
 
+The goal of step-4 Json web token is to have basic understanding about how to produce tokens that we can use for our endpoints.
+
 What is JSON Web Token?
 
 JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
@@ -90,13 +92,13 @@ body:
         password: black0Z12345
 ```
 
-Response:
+Token:
 
-Screenshot - TODO
+![alt text](request-token.png)
 
-It will generate `refresh` and `token` json encoded values where you can verify your generated token here: https://jwt.io/ and check `secret base64 encoded`
+It will generate two tokens which are `refresh` and `token` json encoded values.
 
-2. Requesting for new token.
+2. Requesting for a new token.
 
 ```
 url: http://127.0.0.1:8000/api/token/refresh/
@@ -105,23 +107,19 @@ body:
     form-urlencoded:
         refresh: REFRESH_TOKEN
 ```
-Response:
 
-Screenshot - TODO
+Referesh token:
 
-Example of new access token:
+![alt text](request-new-if-expired.png)
 
-```
-{
-"access": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNTYxMzU4MTM5LCJqdGkiOiJmMTc4ZjA3Y2UzNjc0ZTllYTUyOTYyYmU1NjJhM2NiOCIsInVzZXJfaWQiOjF9.YQvnZadr4HI2AexyVnlNqlbNQxwwjALNdByYT6pPoo8"
-}
-```
 
-explanation: 
-**refresh** = You can use this to request new token incase your current `token` expires
-**token** = Access token that can use for any api endpoints.
+Descriptions: 
 
-After generating token you can access these api endpoints using your provided `token`.
+1. **token** = Access token that can use for any api endpoints.
+
+2. **refresh token** = You can use this to request new token incase your current `token` expires
+
+After generating tokens we can access these endpoints.
 
 ```
 http://127.0.0.1:8000/paradigms/
@@ -129,7 +127,7 @@ http://127.0.0.1:8000/languages/
 http://127.0.0.1:8000/programmers/
 ```
 
-Diplaying sample reponse using access `token`:
+Example response:
 
 ```
 url: http://127.0.0.1:8000/paradigms/
