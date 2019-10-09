@@ -60,6 +60,8 @@ class ProgrammerSerializer(serializers.HyperlinkedModelSerializer):
 
 3. Update tutorial/languages/`urls.py` with the code below.
 
+The `router = routers.DefaultRouter()` = tells our application to include a default API root view.
+
 ```
 from django.urls import path, include
 from . import views 
