@@ -2,8 +2,9 @@
 
 The goal of this tutorial is to have an idea on how to connect postgresql to docker.
 
-Docker reference : https://github.com/boomcamp/node-3
-Docker file : https://github.com/boomcamp/node-3/blob/master/docker-compose.yml
+- Docker reference : https://github.com/boomcamp/node-3
+
+- Docker file : https://github.com/boomcamp/node-3/blob/master/docker-compose.yml
 
 1. Update `tutorial/api/settings.py` with these database settings.
 
