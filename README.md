@@ -1,5 +1,7 @@
 # Step-3 - Permissions
 
+The goal of step-3 permissions is to have basic understanding about how permissions work in django.
+
 **Django permissions** = Django comes with a simple permissions system. It provides a way to assign permissions to specific views, users and groups of users.
 
 First make sure that your virtual environment is active : `pipenv shell`.
