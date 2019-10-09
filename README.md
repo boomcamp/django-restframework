@@ -156,4 +156,7 @@ after sending the request you should see a response like:
 }
 
 ```
+### Next
+
+[step5: Re-installing ](https://github.com/boomcamp/django-restframework/tree/step5-tutorial).
 
