@@ -68,7 +68,7 @@ INSTALLED_APPS = [
 
 8. tutorial/languages/`models.py`.
 
-models.py = TODO
+models.py = Holds field for language app.
 
 ```
 from django.db import models
@@ -83,7 +83,7 @@ class Language(models.Model):
 
 9. tutorial/languages/`serializers.py`.
 
-serializers.py = TODO
+serializers.py = Holds model and queryset
 
 ```
 from rest_framework import serializers
@@ -97,7 +97,7 @@ class LanguageSerializer(serializers.HyperlinkedModelSerializer):
 
 10. tutorial/languages/`urls.py`.
 
-languages/urls.py =  TODO
+languages/urls.py =  Holds routing for language app.
 
 ```
 from django.urls import path, include
@@ -114,7 +114,7 @@ urlpatterns = [
 
 11. tutorial/languages/`views.py`.
 
-views.py = TODO
+views.py = Holds views for language app.
 
 ```
 from django.shortcuts import render
@@ -129,7 +129,7 @@ class LanguageView(viewsets.ModelViewSet):
 
 12. tutorial/api/`urls.py`.
 
-apit/urls.py = TODO
+api/urls.py = The main routing application.
 
 I have import ***include*** and added `path('', include('languages.urls'))` into ***urlpatterns***
 ```
