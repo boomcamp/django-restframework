@@ -4,7 +4,7 @@
 
 First make sure that your virtual environment is active : `pipenv shell`.
 
-1. Update your `tutorial/api/urls.py` with the following.
+1. Check `tutorial/api/urls.py` it should have the following.
 
 ```
 urlpatterns = [
