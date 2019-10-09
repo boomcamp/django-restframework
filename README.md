@@ -23,20 +23,17 @@ Some reasons you might want to use REST framework:
 Tutorial branches:
 
 
-1. **step1-basics** = Creating tutorial folder and setting up virtual environment with pipenv, django and djangorestframework installation, creating api app.
+1. **[step1: The Basics](https://github.com/boomcamp/django-restframework/tree/step1-basics)** = Creating tutorial folder and setting up virtual environment with pipenv, django and djangorestframework installation, creating api app.
 
-2. **step2-simple-orm** = Basic ORM template Language, Paradigm, Programmer model serializers, url, views creating basic table
+2. **[step2: Basic ORM](https://github.com/boomcamp/django-restframework/tree/step2-simple-orm)** = Basic ORM template Language, Paradigm, Programmer model serializers, url, views creating basic table
 
-3. **step3-permissions** = Adding permissions.IsAuthenticatedOrReadOnly languages/views.py.
+3. **[step3: Permissions](https://github.com/boomcamp/django-restframework/tree/step3-permissions)** = Adding permissions.IsAuthenticatedOrReadOnly languages/views.py.
 
-4. **step4-jwt** = Generating and Securing api, adding rest_framework_simplejwt.authentication.JWTAuthentication to REST_FRAMEWORK, importing TokenObtainPairView, TokenRefreshView to tutorial/api/urls.py.
+4. **[step4: Jason Token](https://github.com/boomcamp/django-restframework/tree/step4-jwt)** = Generating and Securing api, adding rest_framework_simplejwt.authentication.JWTAuthentication to REST_FRAMEWORK, importing TokenObtainPairView, TokenRefreshView to tutorial/api/urls.py.
 
-5. **step5-tutorial** = Done.
+5. **[step5: Recompile](https://github.com/boomcamp/django-restframework/tree/step5-tutorial)** = Executing the app.
 
-6 **step6-rest-swagger** = Swagger api documentation.
-
-
-If havent configured environment : https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3
+6 **[step6: Rest swagger](https://github.com/boomcamp/django-restframework/tree/step6-rest-swagger)** = Swagger api documentation.
 
 Official documentation:
 
