@@ -45,17 +45,17 @@ dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$  . /home/dev-mentor/.
 (tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ 
 ```
 
-4. Serve Django with specific port
+4. Serve Django with specific port `python3 manage.py runserver 5000`
 
 ```
-(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python3 manage.py runserver 3000
+(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python3 manage.py runserver 5000
 Watching for file changes with StatReloader
 Performing system checks...
 
 System check identified no issues (0 silenced).
 October 09, 2019 - 06:47:21
 Django version 2.2.6, using settings 'api.settings'
-Starting development server at http://127.0.0.1:3000/
+Starting development server at http://127.0.0.1:5000/
 Quit the server with CONTROL-C.
 ```
 
