@@ -1,6 +1,6 @@
 # Step-3 - Permissions
 
-**Django permissions** = Django comes with a simple permissions system. It provides a way to assign permissions to specific users and groups of users.
+**Django permissions** = Django comes with a simple permissions system. It provides a way to assign permissions to specific views, users and groups of users.
 
 First make sure that your virtual environment is active : `pipenv shell`.
 
