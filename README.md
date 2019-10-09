@@ -161,3 +161,9 @@ Programmers
 ### Resources ORM
 
 [Django ORM Relationships Cheat Sheet](https://hackernoon.com/django-orm-relationships-cheat-sheet-14433d6cf68c)
+
+
+### Next
+
+[step3: Permissions](https://github.com/boomcamp/django-restframework/tree/step3-permissions)
+
