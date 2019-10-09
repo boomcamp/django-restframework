@@ -44,14 +44,18 @@ Admin Dashboard
 
 There are two common permissions that you can use in django rest framwork. 
 
-1. Individual views = TODO 
+1. **Individual views** = Integrated only for every individual class view objects. 
 
-2. Global settings = TODO
+2. **Global settings** = Integrated under `settings.py`.
 
-Update `tutorial/languages/views.py` import `permissions` and below class `LanguageView` add **permission_classes = (permissions.IsAuthenticatedOrReadOnly,)**
+Example: Clas **LanguageView**. 
+
+- Import permissions `from rest_framework import permissions`.
+- Below class `LanguageView` add **permission_classes = (permissions.IsAuthenticatedOrReadOnly,)**.
 
 ```
 # tutorial/languages/views.py
+
 from django.shortcuts import render
 from rest_framework import viewsets, permissions
 from .models import Language, Paradigm, Programmer
