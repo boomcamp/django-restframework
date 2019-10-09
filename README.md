@@ -59,4 +59,7 @@ Starting development server at http://127.0.0.1:5000/
 Quit the server with CONTROL-C.
 ```
 
+### Next
+
+[step6: Rest swagger](https://github.com/boomcamp/django-restframework/tree/step6-rest-swagger).
 
