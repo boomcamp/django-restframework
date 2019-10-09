@@ -42,14 +42,26 @@ Admin Dashboard
 
 ### Permissions
 
-There are two common permissions that you can use in django rest framwork. 
+There are two common permissions that we can use in django rest framwork. 
 
-1. **Individual views** = Integrated only for every individual class view objects. 
+1. **Individual views** = Can set for every individual class view objects. 
 
-2. **Global settings** = Integrated under `settings.py`.
+2. **Global settings** = Can set under `settings.py`.
 
-Example: Clas **LanguageView**. 
 
+## Demonstration 
+
+There are some permission's that we can integrate to our application.
+
+1. **IsAuthenticatedOrReadOnly** = Can view rest api even NOT AUTHENTICATED Can view form if AUTHENTICATED.
+
+2. **IsAuthenticated** = Can view both rest api and form if AUTHENTICATED.
+
+In this example im going to protect **LanguageView** using individual view
+
+Syntax : `permission_classes = (permissions.IsAuthenticatedOrReadOnly,)`.
+
+Steps:
 - Import permissions `from rest_framework import permissions`.
 - Below class `LanguageView` add **permission_classes = (permissions.IsAuthenticatedOrReadOnly,)**.
 
@@ -75,16 +87,16 @@ class ProgrammerView(viewsets.ModelViewSet):
     serializer_class = ProgrammerSerializer
 ```
 
-Example of permission's that we can integrate to our application.
+Not protected view 
 
-1. **IsAuthenticatedOrReadOnly** = Can view rest api even NOT AUTHENTICATED Can view form if AUTHENTICATED.
+![alt text](auth-protected-view.png)
 
-2. **IsAuthenticated** = Can view both rest api and form if AUTHENTICATED.
+Protected view with `permission_classes = (permissions.IsAuthenticatedOrReadOnly,)`
+
+![alt text](auth-not-protected-view.png)
 
 
-Syntax : `permission_classes = (permissions.IsAuthenticatedOrReadOnly,)`.
-
-You can also set `global` permissions under `tutorial/api/settings.py` like example below.
+We can also set `global` permissions under `tutorial/api/settings.py` like example below.
 
 ```
 REST_FRAMEWORK = {
