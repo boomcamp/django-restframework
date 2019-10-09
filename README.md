@@ -109,3 +109,8 @@ REST_FRAMEWORK = {
 ```
 
 Complete permissions documentation: https://www.django-rest-framework.org/api-guide/permissions/
+
+### Next
+
+[step4: Jason Token](https://github.com/boomcamp/django-restframework/tree/step4-jwt).
+
