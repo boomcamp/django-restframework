@@ -19,6 +19,9 @@ Some reasons you might want to use REST framework:
   - https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3
 3. Jason web token knowledge.
 4. ORM(Object Relational Mapper) knowledge.
+5. Knowledge from previous docker lesson.
+  - https://github.com/boomcamp/docker-1-mini
+  - https://github.com/boomcamp/node-3
 
 Tutorial branches:
 
@@ -35,6 +38,7 @@ Tutorial branches:
 
 6. **[step6: Rest swagger](https://github.com/boomcamp/django-restframework/tree/step6-rest-swagger)** = Swagger api documentation.
 
+7. **[step7: Postgresql](https://github.com/boomcamp/django-restframework/tree/step7-docker-postgres)** = Connecting to docker postgresql.
 
 ### Start
 
