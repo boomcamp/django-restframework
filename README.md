@@ -98,7 +98,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 2e20e3c5179e        postgres            "docker-entrypoint.s…"   5 minutes ago       Up 5 minutes        0.0.0.0:5432->5432/tcp   tutorial_db_1
 ```
 
-6. Create and connect to container `2e20e3c5179e` and login to database. 
+6. Connect to container `2e20e3c5179e` create and login to `node3db` database. 
 
 **\l** = List database
 
