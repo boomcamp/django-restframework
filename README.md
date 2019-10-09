@@ -1,17 +1,18 @@
 ### Connecting to docker postgresql.
 
-The goal of this tutorial is to have an idea on how to connect postgresql to docker.
+The goal of this tutorial is to have an idea on how to connect postgresql to docker its just the same on how you connect node to docker on your frontend-course.
 
 - Docker reference : https://github.com/boomcamp/node-3
 
 - Docker file : https://github.com/boomcamp/node-3/blob/master/docker-compose.yml
 
-1. Update `tutorial/api/settings.py` with these database settings.
+
+1. Configure `tutorial/api/settings.py` with these database settings.
 
 ```
 DATABASES = {
      'default': {
-        'ENGINE': 'django.db.backends.postgresql',  # Engine type
+        'ENGINE': 'django.db.backends.postgresql',  # The engine type
         'NAME': 'node3db',                          # Database name
         'USER': 'postgres',                         # Database username
         'PASSWORD' : 'node3db',                     # database password
@@ -22,7 +23,9 @@ DATABASES = {
 
 ```
 
-2. We need `psycopg2-binary` library to connect django to posgtres .
+2. We need `psycopg2-binary` adapter to connect django to posgtres .
+
+**Psycopg** = is the most popular PostgreSQL database adapter for the Python programming language.
 
 ```
 dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ pipenv install psycopg2-binary
