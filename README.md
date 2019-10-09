@@ -1,4 +1,4 @@
-# Introduction to Django-restframework
+# Introduction
 
 Django REST framework is a powerful and flexible toolkit for building Web APIs.
 
