@@ -153,3 +153,13 @@ class ProgrammerView(viewsets.ModelViewSet):
     serializer_class = ProgrammerSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,)
 ```
+
+
+Screenshot 1
+
+![alt text](root-api.png)
+
+
+Screenshot 2
+
+![alt text](collapsed-api.png)
