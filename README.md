@@ -14,7 +14,7 @@ Some reasons you might want to use REST framework:
 ### Prerequisite
 
 1. Python and Django knowledge.
-2. Have a configured environment.
+2. Have knowlege on how to configured environment.
   - https://github.com/boomcamp/pyenv-installation
   - https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3
 3. Jason web token knowledge.
