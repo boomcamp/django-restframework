@@ -166,3 +166,7 @@ Screenshot 1
 Screenshot 2
 
 ![alt text](collapsed-api.png)
+
+### Next 
+
+[step7: Connecting to postgresql](https://github.com/boomcamp/django-restframework/tree/step7-docker-postgres).
