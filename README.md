@@ -11,6 +11,13 @@ Some reasons you might want to use REST framework:
 - Extensive documentation, and great community support.
 - Used and trusted by internationally recognised companies including Mozilla, Red Hat, Heroku, and Eventbrite.
 
+### Prerequisite
+
+1. Python and Django knowledge.
+2. Have configured environment.
+3. Jason web token basic knowledge.
+4. ORM(Object Relational Mapper) knowledge.
+
 Tutorial branches:
 
 
