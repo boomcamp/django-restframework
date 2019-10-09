@@ -31,9 +31,9 @@ Tutorial branches:
 
 4. **[step4: Jason Token](https://github.com/boomcamp/django-restframework/tree/step4-jwt)** = Generating and Securing api, adding rest_framework_simplejwt.authentication.JWTAuthentication to REST_FRAMEWORK, importing TokenObtainPairView, TokenRefreshView to tutorial/api/urls.py.
 
-5. **[step5: Recompile](https://github.com/boomcamp/django-restframework/tree/step5-tutorial)** = Executing the app.
+5. **[step5: Re-installing](https://github.com/boomcamp/django-restframework/tree/step5-tutorial)** = Reinstalling packages from Pipfile.
 
-6 **[step6: Rest swagger](https://github.com/boomcamp/django-restframework/tree/step6-rest-swagger)** = Swagger api documentation.
+6. **[step6: Rest swagger](https://github.com/boomcamp/django-restframework/tree/step6-rest-swagger)** = Swagger api documentation.
 
 Official documentation:
 
