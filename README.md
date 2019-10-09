@@ -6,19 +6,24 @@ JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and s
 
 Source : https://jwt.io/
 
-1. We need to install `djangorestframework-jwt` library into our virtual environment.
+1. We need to install `djangorestframework-jwt` library into our active virtual environment.
 
 ```
-pipenv install djangorestframework-jwt
+(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ pipenv install djangorestframework_simplejwt
+Installing djangorestframework_simplejwt…
+Adding djangorestframework_simplejwt to Pipfile's [packages]…
+✔ Installation Succeeded 
+Pipfile.lock (271d0b) out of date, updating to (0bbb1b)…
+Locking [dev-packages] dependencies…
+Locking [packages] dependencies…
+✔ Success! 
+Updated Pipfile.lock (271d0b)!
+Installing dependencies from Pipfile.lock (271d0b)…
+  🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 7/7 — 00:00:02
 ```
 
-2. Re-run virtual environment.
+2. Update or add this into `REST_FRAMEWORK` under `tutorial/api/settings.py`.
 
-```
-pipenv shell
-```
-
-3. Update `REST_FRAMEWORK` under `tutorial/api/settings.py`.
 ```
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': (
@@ -30,13 +35,15 @@ REST_FRAMEWORK = {
 }
 ```
 
-4. Under `tutorial/api/urls.py` import.
+4. Under `tutorial/api/urls.py` we need to declare variables `TokenObtainPairView, TokenRefreshView` from `rest_framework_simplejwt.views` views.
 
 ```
 ...
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 ```
+
 and update **urlpatterns** with these code.
+
 ```
 urlpatterns = [
     ...
@@ -45,9 +52,35 @@ urlpatterns = [
 ]
 ```
 
-5. You can now test it with `postman` or any rest GUI client.
+We should now have these complete code:
 
-Providing a token
+```
+from django.contrib import admin
+from django.urls import path, include
+from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
+
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', include('languages.urls')),
+    path('api-auth', include('rest_framework.urls')),
+    path('api/token/', TokenObtainPairView.as_view()),
+    path('api/token/refresh/', TokenRefreshView.as_view())
+]
+
+```
+
+5. We can now download or install [insomnia](https://insomnia.rest/download/) directly .
+
+```
+(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ sudo snap install insomnia
+```
+
+you can also use any REST gui client you may want.
+
+### Accessing our endpoints
+
+1. Providing a token.
+
 ```
 endpoint: http://127.0.0.1:8000/api/token/
 method: POST
@@ -57,9 +90,14 @@ body:
         password: black0Z12345
 ```
 
+Response:
+
+Screenshot - TODO
+
 It will generate `refresh` and `token` json encoded values where you can verify your generated token here: https://jwt.io/ and check `secret base64 encoded`
 
-Requesting for new token
+2. Requesting for new token.
+
 ```
 url: http://127.0.0.1:8000/api/token/refresh/
 method: POST
@@ -67,8 +105,11 @@ body:
     form-urlencoded:
         refresh: REFRESH_TOKEN
 ```
+Response:
 
-example of new access token:
+Screenshot - TODO
+
+Example of new access token:
 
 ```
 {
@@ -78,7 +119,7 @@ example of new access token:
 
 explanation: 
 **refresh** = You can use this to request new token incase your current `token` expires
-**token** = Access token that can use for any api endpoints
+**token** = Access token that can use for any api endpoints.
 
 After generating token you can access these api endpoints using your provided `token`.
 
@@ -89,6 +130,7 @@ http://127.0.0.1:8000/programmers/
 ```
 
 Diplaying sample reponse using access `token`:
+
 ```
 url: http://127.0.0.1:8000/paradigms/
 method: GET 
@@ -117,17 +159,3 @@ after sending the request you should see a response like:
 
 ```
 
-
-[Documentation for django-rest-framework-jwt](http://getblimp.github.io/django-rest-framework-jwt/)
-### Requirements
-* Python (2.7, 3.3, 3.4, 3.5)
-* Django (1.8, 1.9, 1.10)
-* Django REST Framework (3.0, 3.1, 3.2, 3.3, 3.4, 3.5)
-
-
-[Documentation for django-rest-framework-simplejwt](https://github.com/davesque/django-rest-framework-simplejwt)
-
-### Requirements
-* Python (3.5, 3.6, 3.7)
-* Django (1.11, 2.0, 2.1, 2.2)
-* Django REST Framework (3.5, 3.6, 3.7, 3.8, 3.9)
