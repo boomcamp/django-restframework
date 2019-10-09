@@ -197,10 +197,3 @@ Result : (Root page)
 ![Django Root page](root.png)
 
 
-### References and Tutorials for more advance tutorials about JWT, Table joining etc.
----
-[Django Restframework serializes](https://www.django-rest-framework.org/tutorial/quickstart/#serializers)
-
-[pipenv installation](https://hackernoon.com/reaching-python-development-nirvana-bb5692adf30c)
-
-[Python and Django Restframeworks](https://www.youtube.com/channel/UC-QDfvrRIDB6F0bIO4I4HkQ/videos)
