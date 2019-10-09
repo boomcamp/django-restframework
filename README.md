@@ -196,4 +196,7 @@ Result : (Root page)
 
 ![Django Root page](root.png)
 
+### Next
+
+[step2: Basic ORM](https://github.com/boomcamp/django-restframework/tree/step2-simple-orm)
 
