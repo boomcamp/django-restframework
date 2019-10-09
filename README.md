@@ -24,6 +24,8 @@ Tutorial branches:
 
 5. **step5-tutorial** = Done.
 
+6 **step6-rest-swagger** = Swagger api documentation.
+
 
 If havent configured environment : https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3
 
@@ -32,3 +34,5 @@ Official documentation:
 [Django](https://www.djangoproject.com/)
 
 [Django Restframework](https://www.django-rest-framework.org/)
+
+[Django Restswagger](https://django-rest-swagger.readthedocs.io/en/latest/)
