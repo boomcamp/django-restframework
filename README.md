@@ -1,5 +1,9 @@
 # Introduction
 
+The goal of this tutorial is to make familiar with rest api backend development at the same time documentation.
+
+### Pre reading
+
 Django REST framework is a powerful and flexible toolkit for building Web APIs.
 
 Some reasons you might want to use REST framework:
@@ -11,14 +15,24 @@ Some reasons you might want to use REST framework:
 - Extensive documentation, and great community support.
 - Used and trusted by internationally recognised companies including Mozilla, Red Hat, Heroku, and Eventbrite.
 
+
 ### Prerequisite
 
 1. Python and Django knowledge.
+
+(Some of good materials that you can start learning)
+  - https://www.programiz.com/python-programming
+  - https://www.javatpoint.com/django-tutorial 
+  
 2. Have knowlege on how to configured environment.
+
   - https://github.com/boomcamp/pyenv-installation
   - https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3
+  
 3. Jason web token knowledge.
+
 4. ORM(Object Relational Mapper) knowledge.
+
 5. Knowledge from previous docker lesson.
   - https://github.com/boomcamp/docker-1-mini
   - https://github.com/boomcamp/node-3
