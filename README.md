@@ -145,7 +145,7 @@ urlpatterns = [
 13. Create the initial migration. by default, the configuration uses `SQLite`.
 
 ```
-(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python3 manage.py makemigrations
+(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python manage.py makemigrations
 Migrations for 'languages':
   languages/migrations/0001_initial.py
     - Create model Language
@@ -154,7 +154,7 @@ Migrations for 'languages':
 14. Create the tables.
 
 ```
-(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python3 manage.py migrate
+(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python manage.py migrate
 Operations to perform:
   Apply all migrations: admin, auth, contenttypes, languages, sessions
 Running migrations:
