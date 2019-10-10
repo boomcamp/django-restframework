@@ -18,7 +18,7 @@ urlpatterns = [
 2. Create superuser account.
 
 ```
-(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python3 manage.py createsuperuser --email admin@example.com --username admin
+(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python manage.py createsuperuser --email admin@example.com --username admin
 Password: 
 Password (again): 
 Superuser created successfully.
@@ -27,7 +27,7 @@ Superuser created successfully.
 3. Start django server.
 
 ```
-python3 manage.py runserver
+python manage.py runserver
 ```
 
 4. Navigate to `http://127.0.0.1:8000/admin/` and enter your created login credentials.
