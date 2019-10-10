@@ -45,10 +45,10 @@ dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$  . /home/dev-mentor/.
 (tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ 
 ```
 
-4. Serve Django with specific port `python3 manage.py runserver 5000`
+4. Serve Django with specific port `python manage.py runserver 5000`
 
 ```
-(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python3 manage.py runserver 5000
+(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python manage.py runserver 5000
 Watching for file changes with StatReloader
 Performing system checks...
 
