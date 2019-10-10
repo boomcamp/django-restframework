@@ -101,29 +101,29 @@ class ProgrammerView(viewsets.ModelViewSet):
 6. Re-update migrate tables and serve.
 
 ```
-python3 manage.py makemigrations
-python3 manage.py migrate 
-python3 manage.py runserver
+python manage.py makemigrations
+python manage.py migrate 
+python manage.py runserver
 ```
 
 Output: 
 
 ```
-(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python3 manage.py makemigrations
+(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python manage.py makemigrations
 Migrations for 'languages':
   languages/migrations/0002_auto_20191008_0906.py
     - Create model Paradigm
     - Alter field paradigm on language
     - Create model Programmer
 
-(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python3 manage.py migrate 
+(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python manage.py migrate 
 Operations to perform:
   Apply all migrations: admin, auth, contenttypes, languages, sessions
 Running migrations:
   Applying languages.0002_auto_20191008_0906... OK
 
 
-(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python3 manage.py runserver
+(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python manage.py runserver
 Watching for file changes with StatReloader
 Performing system checks...
 
