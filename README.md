@@ -135,7 +135,7 @@ node3db=#
 7. Run migration.
 
 ```
-(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python3 manage.py migrate
+(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python manage.py migrate
 Operations to perform:
   Apply all migrations: admin, auth, contenttypes, languages, sessions
 Running migrations:
