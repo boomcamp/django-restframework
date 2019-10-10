@@ -18,6 +18,14 @@ Some reasons you might want to use REST framework:
 
 ### Prerequisite
 
+**Set-up**
+
+https://github.com/boomcamp/pyenv-installation
+
+https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3
+
+**Knowledge**
+
 1. Python and Django knowledge.
 
 (Some of good materials that you can start learning)
