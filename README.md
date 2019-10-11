@@ -25,7 +25,7 @@ DATABASES = {
 
 2. We need `psycopg2-binary` adapter to connect django to posgtres .
 
-**Psycopg** = is the most popular PostgreSQL database adapter for the Python programming language.
+**Psycopg** = is the most popular PostgreSQL database [adapter](https://link.springer.com/referenceworkentry/10.1007%2F978-0-387-39940-9_1182) for the Python programming language.
 
 ```
 dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ pipenv install psycopg2-binary
