@@ -1,6 +1,6 @@
 # Step-5 - Installing package and dependencies from Pipfile.
 
-So we are done with the tutorial, we can try to remove activate environment and re-activate.
+So we are done with the tutorial, we can try to remove activated environment and re-activate again.
 
 1. Remove existing environment.
 
