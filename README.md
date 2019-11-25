@@ -14,7 +14,7 @@ You can write a Swagger spec for your API manually, or have it generated automat
 
 ### Rest swagger integration.
 
-We are going to integrate [django-rest-swagger](https://django-rest-swagger.readthedocs.io/en/latest/) as default api documentation.
+In this tutorial we are going to demonstrate it using [django-rest-swagger](https://django-rest-swagger.readthedocs.io/en/latest/) for documentation.
 
 1. Install rest swagger.
 
@@ -71,7 +71,7 @@ urlpatterns = [
     path('', include(router.urls))
 ]
 
-4. First we need to secure our endpoints so i add `permission_classes = (permissions.IsAuthenticatedOrReadOnly,)` at bottom of every class object
+4. We need to secure our endpoints so i added `permission_classes = (permissions.IsAuthenticatedOrReadOnly,)` at bottom of every class objects.
 
 We can now start documenting our endpoints: `tutorial/languages/views.py`.
 
@@ -156,7 +156,7 @@ class ProgrammerView(viewsets.ModelViewSet):
 
 ### Documentations
 
-Now navigate to `http://127.0.0.1:3000/docs/`
+Now navigate to `http://127.0.0.1:3000/docs/` we should now see these examples.
 
 Screenshot 1
 
