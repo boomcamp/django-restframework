@@ -181,7 +181,7 @@ Running migrations:
 Served at `http://127.0.0.1:8000/`
 
 ```
-(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python3 manage.py runserver
+(tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python manage.py runserver
 Watching for file changes with StatReloader
 Performing system checks...
 
