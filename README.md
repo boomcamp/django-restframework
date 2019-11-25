@@ -9,9 +9,8 @@ dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ pipenv --rm
 Removing virtualenv (/home/dev-mentor/.local/share/virtualenvs/tutorial-kIS-RzCH)…
 ```
 
-2. Then re-install `pipenv install` or `pipenv install --dev` (if there are dev dependencies) should be ran
-
-in this case `pipenv install` since we dont have `[dev-packages]` in our `Pipfile`.
+2. Then `pipenv install` to re-install and or `pipenv install --dev` (to install dev dependencies)
+, since we dont have `[dev-packages]` in our `Pipfile`, in this case we need to use only `pipenv install` .
 
 ```
 dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ pipenv install
