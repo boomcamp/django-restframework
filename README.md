@@ -1,6 +1,6 @@
 # Step-2 basic ORM
 
-The goal of step-2 basic orm is to have basic understanding for django models
+The goal of step-2 basic orm is to have understanding about Django Models.
 
 Example : paradigms > languages > programmers.
 
@@ -158,7 +158,7 @@ Programmers
 
 
 
-### Resources ORM
+### Reference
 
 [Django ORM Relationships Cheat Sheet](https://hackernoon.com/django-orm-relationships-cheat-sheet-14433d6cf68c)
 
