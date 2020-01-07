@@ -1,8 +1,8 @@
 ### Connecting to docker postgresql.
 
-The goal of this tutorial is to have an idea on how to connect postgresql to docker its just the same on how you connect node to docker on your frontend-course.
+This is just the same on how you connect node to docker on your frontend-course.
 
-- Docker reference : https://github.com/boomcamp/node-3
+- Frontend docker reference : https://github.com/boomcamp/node-3
 
 - Docker file that i used : https://github.com/boomcamp/node-3/blob/master/docker-compose.yml
 
