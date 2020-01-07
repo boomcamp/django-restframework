@@ -20,10 +20,10 @@ Some reasons you might want to use REST framework:
 
 Already have this ff:
 
-1. Python and Django.
+1. Python and Django Tutorial.
 
   - https://www.programiz.com/python-programming
-  - https://www.javatpoint.com/django-tutorial 
+  - https://docs.djangoproject.com/en/3.0/intro/
   
 2. Basic understanding on how to configured development environment.
 
