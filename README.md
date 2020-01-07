@@ -1,14 +1,8 @@
 # Step-4 - Json Web Token
 
-The goal of step-4 Json web token is to have basic understanding about how to produce tokens that we can use for our endpoints.
+We're going to produce token's for our app
 
-What is JSON Web Token?
-
-JSON Web Token (JWT) is an open standard (RFC 7519) that defines a compact and self-contained way for securely transmitting information between parties as a JSON object. This information can be verified and trusted because it is digitally signed. JWTs can be signed using a secret (with the HMAC algorithm) or a public/private key pair using RSA or ECDSA.
-
-Source : https://jwt.io/
-
-1. We need to install `djangorestframework-jwt` library into our active virtual environment.
+1. We need to install `djangorestframework-jwt` library in our active virtual environment.
 
 ```
 (tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ pipenv install djangorestframework_simplejwt
