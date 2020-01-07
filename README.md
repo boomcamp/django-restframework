@@ -2,11 +2,11 @@
 
 The goal of step-2 basic orm is to have understanding about Django Models.
 
-Example : paradigms > languages > programmers.
+Sequence : paradigms > languages > programmers.
 
-What is **ORM** = Object-relational mapping (ORM) is a programming technique in which a metadata descriptor is used to `connect object code` to a `relational database`.
+### ORM
 
-Below are example of an ORM.
+Object-relational mapping (ORM) is a programming technique in which a metadata descriptor is used to `connect object code` to a `relational database`.
 
 1. Update tutorial/languages/`models.py` with the code below.
 
