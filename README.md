@@ -1,6 +1,9 @@
 # Introduction
 
-The goal of this tutorial is to make familiar with rest api backend development at the same time documentation.
+The goal of this tutorial is to get familiar on how to use django rest framework, integrate rest swagger and connect to docker postgresql.
+
+[step1: The basics](https://github.com/boomcamp/django-restframework/tree/step1-basics)
+
 
 ### Pre reading
 
@@ -16,9 +19,7 @@ Some reasons you might want to use REST framework:
 - Used and trusted by internationally recognised companies including Mozilla, Red Hat, Heroku, and Eventbrite.
 
 
-### Prerequisite
-
-Already have this ff:
+### Prerequisites
 
 1. Python and Django Tutorial.
 
@@ -36,28 +37,6 @@ Already have this ff:
   - https://github.com/boomcamp/docker-1-mini
   - https://github.com/boomcamp/node-3
   - https://docs.docker.com/compose/django/
-
-
-### Lessons:
-
-1. **[step1: The Basics](https://github.com/boomcamp/django-restframework/tree/step1-basics)** = Creating tutorial folder and setting up virtual environment with pipenv, django and djangorestframework installation, creating api app.
-
-2. **[step2: Basic ORM](https://github.com/boomcamp/django-restframework/tree/step2-simple-orm)** = Basic ORM template Language, Paradigm, Programmer model serializers, url, views creating basic table
-
-3. **[step3: Permissions](https://github.com/boomcamp/django-restframework/tree/step3-permissions)** = Adding permissions.IsAuthenticatedOrReadOnly languages/views.py.
-
-4. **[step4: Jason Token](https://github.com/boomcamp/django-restframework/tree/step4-jwt)** = Generating and Securing api, adding rest_framework_simplejwt.authentication.JWTAuthentication to REST_FRAMEWORK, importing TokenObtainPairView, TokenRefreshView to tutorial/api/urls.py.
-
-5. **[step5: Re-installing](https://github.com/boomcamp/django-restframework/tree/step5-tutorial)** = Reinstalling packages from Pipfile.
-
-6. **[step6: Rest swagger](https://github.com/boomcamp/django-restframework/tree/step6-rest-swagger)** = Swagger api documentation.
-
-7. **[step7: Postgresql](https://github.com/boomcamp/django-restframework/tree/step7-docker-postgres)** = Connecting to docker postgresql.
-
-
-### Start
-
-[step1: The basics](https://github.com/boomcamp/django-restframework/tree/step1-basics)
 
 
 ### References:
