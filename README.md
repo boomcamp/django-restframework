@@ -18,35 +18,27 @@ Some reasons you might want to use REST framework:
 
 ### Prerequisite
 
-**Set-up**
+Already have this ff:
 
-https://github.com/boomcamp/pyenv-installation
+1. Python and Django.
 
-https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3
-
-**Knowledge**
-
-1. Python and Django knowledge.
-
-(Some of good materials that you can start learning)
   - https://www.programiz.com/python-programming
   - https://www.javatpoint.com/django-tutorial 
   
-2. Have knowlege on how to configured environment.
+2. Basic understanding on how to configured development environment.
 
   - https://github.com/boomcamp/pyenv-installation
   - https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3
   
-3. Jason web token knowledge.
+3. JWT(Jason Web Tokens).
 
-4. ORM(Object Relational Mapper) knowledge.
-
-5. Knowledge from previous docker lesson.
+4.  Docker lesson.
   - https://github.com/boomcamp/docker-1-mini
   - https://github.com/boomcamp/node-3
+  - https://docs.docker.com/compose/django/
 
-Tutorial branches:
 
+### Lessons:
 
 1. **[step1: The Basics](https://github.com/boomcamp/django-restframework/tree/step1-basics)** = Creating tutorial folder and setting up virtual environment with pipenv, django and djangorestframework installation, creating api app.
 
@@ -62,13 +54,13 @@ Tutorial branches:
 
 7. **[step7: Postgresql](https://github.com/boomcamp/django-restframework/tree/step7-docker-postgres)** = Connecting to docker postgresql.
 
+
 ### Start
 
 [step1: The basics](https://github.com/boomcamp/django-restframework/tree/step1-basics)
 
 
-
-### Documentations:
+### References:
 
 [Django](https://www.djangoproject.com/)
 
