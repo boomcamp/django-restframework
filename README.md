@@ -105,7 +105,7 @@ Referesh token:
 ![alt text](request-new-if-expired.png)
 
 
-After generating token(s) we should now access these endpoints.
+After generating token(s) we should now have an access on these endpoints.
 
 ```
 http://127.0.0.1:8000/paradigms/
