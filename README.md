@@ -2,10 +2,7 @@
 
 This is just the same on how you connect node to docker on your frontend-course.
 
-- Frontend docker reference : https://github.com/boomcamp/node-3
-
-- Docker file that i used : https://github.com/boomcamp/node-3/blob/master/docker-compose.yml
-
+### Steps
 
 1. Configure `tutorial/api/settings.py` with these database settings.
 
@@ -23,9 +20,7 @@ DATABASES = {
 
 ```
 
-2. We also need to install `psycopg2-binary` adapter to connect django to posgtres.
-
-**Psycopg** = is the most popular PostgreSQL database [adapter](https://link.springer.com/referenceworkentry/10.1007%2F978-0-387-39940-9_1182) for the Python programming language.
+2. We will need to install `psycopg2-binary` adapter to connect django into posgtres.
 
 ```
 dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ pipenv install psycopg2-binary
@@ -44,10 +39,10 @@ Alternatively, run a command inside the virtualenv with pipenv run.
 
 ```
 
-3. Activate shell environment `pipenv shell`.
+3. Now activate shell environment `pipenv shell`.
 
 
-4. Create `docker-compose.yml` or copy at https://github.com/boomcamp/node-3/blob/master/docker-compose.yml
+4. Create `docker-compose.yml` or copy it from https://github.com/boomcamp/node-3/blob/master/docker-compose.yml
 
 ```
 version: '3'
@@ -93,7 +88,7 @@ Creating tutorial_db_1 ... done
 
 ```
 
-6. Check the container if already created. 
+6. Check the container if its already created. 
 
 ```
 dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ docker ps -a
@@ -101,13 +96,7 @@ CONTAINER ID        IMAGE               COMMAND                  CREATED        
 2e20e3c5179e        postgres            "docker-entrypoint.s…"   5 minutes ago       Up 5 minutes        0.0.0.0:5432->5432/tcp   tutorial_db_1
 ```
 
-6. Connect to container `2e20e3c5179e` create and login to `node3db` database.
-
-**\l** = List database
-
-**\c** = Connect to database
-
-**\dt** = Display tables.
+6. Connect to container id `2e20e3c5179e`, create database and login to `node3db` database.
 
 ```
 dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ docker exec -it 2e20e3c5179e bash 
@@ -134,7 +123,7 @@ You are now connected to database "node3db" as user "postgres".
 node3db=# 
 ```
 
-7. Run the migration.
+7. Run django migration.
 
 ```
 (tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python manage.py migrate
@@ -165,8 +154,6 @@ Running migrations:
 
 8. You should now successfully created these tables.
 
-**\dt** = Display tables.
-
 ```
 node3db=# \dt
                      List of relations
@@ -191,9 +178,12 @@ node3db=# \dt
 node3db=# 
 ```
 
-9. You should now successfully connected to our created docker database.
+9. Done.
 
-### Reference
+### References
 
-[postgresql commands](https://gist.github.com/Kartones/dd3ff5ec5ea238d4c546)
+- [Connecting to a docker postgresql container](https://github.com/jinolacson/git-demonstration/blob/master/connect-docker-postgres/connect-docker-postgres.gif)
+
+- [psql commands](http://postgresguide.com/utilities/psql.html)
+
 
