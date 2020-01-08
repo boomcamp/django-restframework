@@ -1,34 +1,34 @@
 # Django Tutorial 1
 
-Basic environment using `pipenv` with `django` and `django restframework`.
+Basic set up of `django` and `django restframework` using `pipenv`.
 
-Before we get started, we need to make sure that `pipenv` already installed in our development machines, you can find setup procedures for pipenv here https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3.
+Before we get started, make sure that [oipenv]( https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3) already installed in our development machines.
 
-1. Create our Project folder called `tutorial`.
+1. Create folder `tutorial`.
 
 ```
 mkdir tutorial && cd tutorial
 ```
 
-2. Install `django` and `djangorestframework` packages using `pipenv`.
+2. Install `django` and `djangorestframework` packages.
 
 ```
 pipenv install django djangorestframework
 ```
 
-3. Activate virtual environment.
+3. Activate the virtual environment.
 
 ```
 pipenv shell
 ```
 
-4. Using `django-admin` create a project folder called `api`. it will be our base directory project.
+4. Using `django-admin` create a project folder called `api`. this will be our base directory project.
 
 ```
 django-admin startproject api .
 ```
 
-5. Next is creating `languages` app. 
+5. Create app called `languages`. 
 
 ```
 django-admin startapp languages
@@ -41,7 +41,7 @@ Output :
 api  languages  manage.py  Pipfile  Pipfile.lock
 ```
 
-6. Create this two files(`serializers.py, urls.py`) under `tutorial/languages/`.
+6. Create these files(`serializers.py, urls.py`) under `tutorial/languages/`.
 
 ```
 touch serializers.py urls.py 
@@ -55,7 +55,7 @@ admin.py  apps.py  __init__.py  migrations  models.py  serializers.py  tests.py 
 
 ```
 
-7. Add these `rest_framework,languages` into `INSTALLED_APPS` under tutorial/api/`settings.py`.
+7. Add `rest_framework,languages` inside `INSTALLED_APPS` under tutorial/api/`settings.py`.
 
 ```
 INSTALLED_APPS = [
@@ -66,9 +66,11 @@ INSTALLED_APPS = [
 ]
 ```
 
+The next steps is we're going to update our source files.
+
 8. tutorial/languages/`models.py`.
 
-models.py = Holds field for language app.
+**models.py** = Holds fields of language app.
 
 ```
 from django.db import models
@@ -83,7 +85,7 @@ class Language(models.Model):
 
 9. tutorial/languages/`serializers.py`.
 
-serializers.py = Holds model and queryset
+**serializers.py** = Holds model and queryset
 
 ```
 from rest_framework import serializers
@@ -97,7 +99,7 @@ class LanguageSerializer(serializers.HyperlinkedModelSerializer):
 
 10. tutorial/languages/`urls.py`.
 
-languages/urls.py =  Holds routing for language app.
+**languages/urls.py** =  Holds routing of our language app.
 
 ```
 from django.urls import path, include
@@ -114,7 +116,7 @@ urlpatterns = [
 
 11. tutorial/languages/`views.py`.
 
-views.py = Holds views for language app.
+**languages/views.py** = Holds views of our language app.
 
 ```
 from django.shortcuts import render
@@ -129,9 +131,10 @@ class LanguageView(viewsets.ModelViewSet):
 
 12. tutorial/api/`urls.py`.
 
-api/urls.py = The main routing application.
+**api/urls.py** = This is our main route for `api` project.
 
-I have import ***include*** and added `path('', include('languages.urls'))` into ***urlpatterns***
+We also need to import ***include*** and add the `path('', include('languages.urls'))` inside ***urlpatterns***.
+
 ```
 from django.contrib import admin
 from django.urls import path, include
@@ -142,7 +145,7 @@ urlpatterns = [
 ]
 ```
 
-13. Create the initial migration. by default, the configuration uses `SQLite`.
+13. Create our first migration, by default django uses`SQLite` which we're going to use to migrate into database.
 
 ```
 (tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python manage.py makemigrations
@@ -178,7 +181,7 @@ Running migrations:
   Applying sessions.0001_initial... OK
 ```
 
-Served at `http://127.0.0.1:8000/`
+15. Last is to serve it at `http://127.0.0.1:8000/`
 
 ```
 (tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python manage.py runserver
@@ -198,5 +201,5 @@ Result : (Root page)
 
 ### Next
 
-[step2: Basic ORM](https://github.com/boomcamp/django-restframework/tree/step2-simple-orm)
+[step2: Add basic django ORM](https://github.com/boomcamp/django-restframework/tree/step2-simple-orm)
 
