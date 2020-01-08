@@ -1,8 +1,8 @@
 # Step-4 - Json Web Token
 
-We're going to produce token's for our app
+We're going to produce token's for our `api` project.
 
-1. We need to install `djangorestframework-jwt` library in our active virtual environment.
+1. First we need to install `djangorestframework-jwt` library in our virtual environment.
 
 ```
 (tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ pipenv install djangorestframework_simplejwt
@@ -18,7 +18,7 @@ Installing dependencies from Pipfile.lock (271d0b)…
   🐍   ▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉▉ 7/7 — 00:00:02
 ```
 
-2. Update or add this into `REST_FRAMEWORK` under `tutorial/api/settings.py`.
+2. Update `REST_FRAMEWORK` under `tutorial/api/settings.py` with these code.
 
 ```
 REST_FRAMEWORK = {
@@ -31,7 +31,7 @@ REST_FRAMEWORK = {
 }
 ```
 
-4. Under `tutorial/api/urls.py` we need to declare variables `TokenObtainPairView, TokenRefreshView` from `rest_framework_simplejwt.views` views.
+4. Under `tutorial/api/urls.py` we will import `TokenObtainPairView, TokenRefreshView`.
 
 ```
 ...
@@ -48,7 +48,7 @@ urlpatterns = [
 ]
 ```
 
-We should now have these complete code:
+We should now have this final code:
 
 ```
 from django.contrib import admin
@@ -65,15 +65,13 @@ urlpatterns = [
 
 ```
 
-5. We can now download or install [insomnia](https://insomnia.rest/download/) directly .
+5. We are also going to use [insomnia](https://insomnia.rest/download/) or any REST gui client you may want.
 
 ```
 (tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ sudo snap install insomnia
 ```
 
-you can also use any REST gui client you may want.
-
-### Accessing our endpoints
+### Endpoints
 
 1. Providing a token.
 
@@ -92,7 +90,7 @@ Token:
 
 It will generate two tokens which are `refresh` and `token` json encoded values.
 
-2. Requesting for a new token.
+2. Requesting a new token.
 
 ```
 url: http://127.0.0.1:8000/api/token/refresh/
@@ -107,13 +105,7 @@ Referesh token:
 ![alt text](request-new-if-expired.png)
 
 
-Descriptions: 
-
-1. **token** = Access token that can use for any api endpoints.
-
-2. **refresh token** = You can use this to request new token incase your current `token` expires
-
-After generating tokens we can access these endpoints.
+After generating token(s) we should now access these endpoints.
 
 ```
 http://127.0.0.1:8000/paradigms/
@@ -150,6 +142,11 @@ after sending the request you should see a response like:
 }
 
 ```
+
+### Pre-reading
+
+[Access Tokens and Refresh Tokens and ID Tokens](https://winsmarts.com/access-tokens-and-refresh-tokens-and-id-tokens-5261bc26e8a2).
+
 ### Next
 
 [step5: Re-installing ](https://github.com/boomcamp/django-restframework/tree/step5-tutorial).
