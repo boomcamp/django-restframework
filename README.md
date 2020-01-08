@@ -156,7 +156,13 @@ Programmers
 
 - [Understanding Django Model Relationships](https://www.youtube.com/watch?v=2KqhBkMv7aM)
 
+- [How Model Queries Work in Django](https://www.youtube.com/watch?v=WimXjp0ryOo)
+
+- [How Model Queries Work in Django - cheatsheet](https://s3.us-east-2.amazonaws.com/prettyprinted/django_cheatsheet.pdf)
+
 - [Django ORM Relationships Cheat Sheet](https://hackernoon.com/django-orm-relationships-cheat-sheet-14433d6cf68c)
+
+
 
 
 ### Next
