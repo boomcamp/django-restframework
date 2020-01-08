@@ -30,7 +30,12 @@ Before jumping into tutorial you should have:
 
 [Django Restswagger](https://django-rest-swagger.readthedocs.io/en/latest/)
 
-### Resources
+### Go to tutorial
+
+[step1: The basics](https://github.com/boomcamp/django-restframework/tree/step1-basics)
+
+
+# Resources
 
 [Getting Started With Django REST Framework](https://www.youtube.com/watch?v=263xt_4mBNc)
 
@@ -39,7 +44,3 @@ Before jumping into tutorial you should have:
 [How to Use Django REST Framework Permissions](https://www.youtube.com/watch?v=yiYpFMk9QdA)
 
 [JSON Web Tokens With Django REST Framework](https://www.youtube.com/watch?v=Fhcn2qx-4VQ)
-
-### Go to tutorial
-
-[step1: The basics](https://github.com/boomcamp/django-restframework/tree/step1-basics)
