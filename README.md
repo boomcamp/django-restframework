@@ -60,6 +60,10 @@ Quit the server with CONTROL-C.
 
 5. Done.
 
+### Resource
+
+[Pipenv: Python Development Workflow for Humans](https://github.com/pypa/pipenv).
+
 ### Next
 
 [step6: Rest swagger](https://github.com/boomcamp/django-restframework/tree/step6-rest-swagger).
