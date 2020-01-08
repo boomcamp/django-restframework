@@ -154,7 +154,9 @@ Programmers
 
 ### Reference
 
-[Django ORM Relationships Cheat Sheet](https://hackernoon.com/django-orm-relationships-cheat-sheet-14433d6cf68c)
+- [Understanding Django Model Relationships](https://www.youtube.com/watch?v=2KqhBkMv7aM)
+
+- [Django ORM Relationships Cheat Sheet](https://hackernoon.com/django-orm-relationships-cheat-sheet-14433d6cf68c)
 
 
 ### Next
