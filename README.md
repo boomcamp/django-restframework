@@ -1,6 +1,6 @@
 # Introduction
 
-This is a follow along tutorial to get familiar with django rest framework, integrate rest swagger and connect to docker postgresql.
+This is a follow along tutorial its a basic familiarization with **django-restframework** we will learn how to `integrate rest swagger`, create `JWT` tokens and connect to `docker postgresql`.
 
 Before jumping into tutorial you should have:
 
