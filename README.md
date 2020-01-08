@@ -35,7 +35,7 @@ Before jumping into tutorial you should have:
 [step1: The basics](https://github.com/boomcamp/django-restframework/tree/step1-basics)
 
 
-# Resources
+<h1 id="resources">Resources</h1>
 
 [Getting Started With Django REST Framework](https://www.youtube.com/watch?v=263xt_4mBNc)
 
