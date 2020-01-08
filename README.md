@@ -57,7 +57,7 @@ There are two common permissions that we can use in django rest framwork these a
 
 ### Steps
 
-We will guard our individual **LanguageView** with `permissions.IsAuthenticatedOrReadOnly`.
+We will protect our **LanguageView** using `permissions.IsAuthenticatedOrReadOnly`.
 
 1.) Import permissions `from rest_framework import permissions`.
 
