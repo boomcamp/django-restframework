@@ -1,6 +1,6 @@
-# Step-5 - Installing package and dependencies from Pipfile.
+# Step-5 - Re - installing packages and development dependencies from Pipfile.
 
-So we are done with the tutorial, we can try to remove activated environment and re-activate again.
+So we are almost done with the tutorial, we will try to remove active environment and re-activate it again.
 
 1. Remove existing environment.
 
@@ -10,7 +10,7 @@ Removing virtualenv (/home/dev-mentor/.local/share/virtualenvs/tutorial-kIS-RzCH
 ```
 
 2. Then `pipenv install` to re-install and or `pipenv install --dev` (to install dev dependencies)
-, since we dont have `[dev-packages]` in our `Pipfile`, in this case we need to use only `pipenv install` .
+, since we dont have `[dev-packages]` in our `Pipfile`, we just use `pipenv install` .
 
 ```
 dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ pipenv install
@@ -57,6 +57,8 @@ Django version 2.2.6, using settings 'api.settings'
 Starting development server at http://127.0.0.1:5000/
 Quit the server with CONTROL-C.
 ```
+
+5. Done.
 
 ### Next
 
