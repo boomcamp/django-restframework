@@ -1,11 +1,5 @@
 # Step-2 basic ORM
 
-The goal of step-2 basic orm is to have understanding about Django Models.
-
-Sequence : paradigms > languages > programmers.
-
-### ORM
-
 Object-relational mapping (ORM) is a programming technique in which a metadata descriptor is used to `connect object code` to a `relational database`.
 
 1. Update tutorial/languages/`models.py` with the code below.
@@ -98,7 +92,7 @@ class ProgrammerView(viewsets.ModelViewSet):
     serializer_class = ProgrammerSerializer
 ```
 
-6. Re-update migrate tables and serve.
+6. Re-migrate tables and serve.
 
 ```
 python manage.py makemigrations
