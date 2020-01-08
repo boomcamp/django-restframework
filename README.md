@@ -31,14 +31,14 @@ REST_FRAMEWORK = {
 }
 ```
 
-4. Under `tutorial/api/urls.py` we will import `TokenObtainPairView, TokenRefreshView`.
+4. Under `tutorial/api/urls.py` we need to import `TokenObtainPairView, TokenRefreshView`.
 
 ```
 ...
 from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 ```
 
-and update **urlpatterns** with these code.
+and update the **urlpatterns** with these code.
 
 ```
 urlpatterns = [
