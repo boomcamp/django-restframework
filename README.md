@@ -1,6 +1,6 @@
 ### Connecting to docker postgresql.
 
-This is just the same on how you connect node to docker on your frontend-course.
+This is just the same on how you connect node to docker in your `frontend-course`.
 
 ### Steps
 
