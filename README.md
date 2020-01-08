@@ -2,8 +2,6 @@
 
 The goal of this tutorial is to get familiar with django rest framework, integrate rest swagger and connect to docker postgresql.
 
-[step1: The basics](https://github.com/boomcamp/django-restframework/tree/step1-basics)
-
 Before jumping into tutorial you should:
 
 1. Have basics of python and Django.
@@ -31,3 +29,7 @@ Before jumping into tutorial you should:
 [Django Restframework](https://www.django-rest-framework.org/)
 
 [Django Restswagger](https://django-rest-swagger.readthedocs.io/en/latest/)
+
+### Go to tutorial
+
+[step1: The basics](https://github.com/boomcamp/django-restframework/tree/step1-basics)
