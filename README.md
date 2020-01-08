@@ -1,6 +1,6 @@
 # Step-3 - Permissions
 
-Django permissions = Django comes with a simple permissions system. It provides a way to assign permissions to specific views, users and groups of users.
+Django comes with a simple permissions system. It provides a way to assign permissions to specific views, users and groups of users.
 
 First make sure that your virtual environment is active : `pipenv shell`.
 
@@ -13,7 +13,7 @@ urlpatterns = [
 ]
 ```
 
-2. Create superuser account.
+2. Create a superuser account.
 
 ```
 (tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ python manage.py createsuperuser --email admin@example.com --username admin
@@ -42,28 +42,26 @@ Admin Dashboard
 
 ### Permissions
 
-There are two common permissions that we can use in django rest framwork. 
+There are two common permissions that we can use in django rest framwork these are. 
 
-1. **Individual views** = Can set for every individual class view objects. 
+1. **Individual views** = Can set for every `individual` class view objects. 
 
-2. **Global settings** = Can set under `settings.py`.
+2. **Global settings** = Can set globaly under `settings.py`.
 
 
-## Demonstration 
-
-There are some permission's that we can integrate to our application.
+## Types
 
 1. **IsAuthenticatedOrReadOnly** = Can view rest api even NOT AUTHENTICATED Can view form if AUTHENTICATED.
 
 2. **IsAuthenticated** = Can view both rest api and form if AUTHENTICATED.
 
-In this example im going to protect **LanguageView** using individual view
+### Steps
 
-Syntax : `permission_classes = (permissions.IsAuthenticatedOrReadOnly,)`.
+We will guard our individual **LanguageView** with `permissions.IsAuthenticatedOrReadOnly`.
 
-Steps:
-- Import permissions `from rest_framework import permissions`.
-- Below class `LanguageView` add **permission_classes = (permissions.IsAuthenticatedOrReadOnly,)**.
+1.) Import permissions `from rest_framework import permissions`.
+
+2.) Below class `LanguageView` add **permission_classes = (permissions.IsAuthenticatedOrReadOnly,)**.
 
 ```
 # tutorial/languages/views.py
@@ -87,14 +85,16 @@ class ProgrammerView(viewsets.ModelViewSet):
     serializer_class = ProgrammerSerializer
 ```
 
-Not protected view 
+Example of a **NOT** protected view. 
 
 ![alt text](auth-protected-view.png)
 
-Protected view with `permission_classes = (permissions.IsAuthenticatedOrReadOnly,)`
+Example of a protected view using `permission_classes = (permissions.IsAuthenticatedOrReadOnly,)`
 
 ![alt text](auth-not-protected-view.png)
 
+
+### Global settings
 
 We can also set `global` permissions under `tutorial/api/settings.py` like example below.
 
