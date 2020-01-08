@@ -2,7 +2,7 @@
 
 We're going to produce token's for our `api` project.
 
-1. First we need to install `djangorestframework-jwt` library in our virtual environment.
+1. First we need to install a library called `djangorestframework_simplejwt` into our virtual environment.
 
 ```
 (tutorial) dev-mentor@devmentor-PC-MK34LEZCBEAD:~/Downloads/tutorial$ pipenv install djangorestframework_simplejwt
