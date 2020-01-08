@@ -1,6 +1,6 @@
 # Introduction
 
-This is a follow along tutorial its a basic familiarization with **django-restframework** you will learn about simple `Orm`,  integrate` rest swagger`, create `JWT` tokens and connect to `docker postgresql`.
+This is a follow along tutorial from [Pretty Printed](http://prettyprinted.com) it's a basic familiarization with **django-restframework** you will learn about simple `Orm`,  integrate` rest swagger`, create `JWT` tokens and connect to `docker postgresql`.
 
 Before jumping into tutorial you should have:
 
