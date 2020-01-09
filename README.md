@@ -6,20 +6,21 @@ Before jumping into tutorial you should have:
 
 1. Basics of python and Django.
 
-  - https://www.programiz.com/python-programming
-  - https://docs.djangoproject.com/en/3.0/intro/
+  - [Python tutorial](https://www.programiz.com/python-programming)
+  - [Django tutorial](https://docs.djangoproject.com/en/3.0/intro/)
+  - [Django Crud](https://rayed.com/posts/2018/05/django-crud-create-retrieve-update-delete/)
   
 2. Understanding on how to configured development environment.
 
-  - https://github.com/boomcamp/pyenv-installation
-  - https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3
+  - [pyenv installation](https://github.com/boomcamp/pyenv-installation)
+  - [pip, pipenv and running first django app](https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3)
   
 3. Familiar with JWT(Jason Web Tokens).
 
 4.  Have docker lessons.
-  - https://github.com/boomcamp/docker-1-mini
-  - https://github.com/boomcamp/node-3
-  - https://docs.docker.com/compose/django/
+  - [Docker mini](https://github.com/boomcamp/docker-1-mini)
+  - [Node 3](https://github.com/boomcamp/node-3)
+  - [Dockerizing Django](https://docs.docker.com/compose/django/)
 
 
 ### References:
