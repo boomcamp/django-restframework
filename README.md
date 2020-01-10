@@ -50,15 +50,19 @@ from django.conf.urls import url
 
 `schema_view = get_swagger_view(title="Swagger Docs")`
 
+```
 router = routers.DefaultRouter()
 router.register('languages', views.LanguageView)
 router.register('paradigms', views.ParadigmView)
 router.register('programmers', views.ProgrammerView)
+```
 
+```
 urlpatterns = [
     `url(r'^docs/', schema_view),`
     path('', include(router.urls))
 ]
+```
 
 4. We will secure our endpoints by adding `permission_classes = (permissions.IsAuthenticatedOrReadOnly,)` at bottom of every class objects.
 
