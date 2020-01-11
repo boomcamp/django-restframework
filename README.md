@@ -12,7 +12,7 @@ Before jumping into tutorial you should have ff:
   
 2. Understanding on how to configured development environment.
 
-  - [pyenv installation](https://github.com/boomcamp/pyenv-installation)(this is optional)
+  - [pyenv installation](https://github.com/boomcamp/pyenv-installation) **(this is optional)**
   - [pip, pipenv and running first django app](https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3)
   
 3. Familiar with JWT(Jason Web Tokens).
