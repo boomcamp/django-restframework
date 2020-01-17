@@ -1,8 +1,8 @@
-### Connecting to docker postgresql.
+# Connecting docker postgreSQL to Django app
 
 This is just the same on how you connect node to docker in your `frontend-course`.
 
-### Steps
+### Here are the steps
 
 1. Configure `tutorial/api/settings.py` with these database settings.
 
@@ -178,7 +178,12 @@ node3db=# \dt
 node3db=# 
 ```
 
-9. Done! after learning the steps you can try to create a react frontend app and connect it into your running `api` you'll also need to deal with `cors` policy issue, if you're going to use `create-react-app` you can just easily [proxify](https://create-react-app.dev/docs/proxying-api-requests-in-development/) it.
+9. Done! after learning the steps you can try to create a react frontend app and connect it into your running `api` you'll also need to deal with `cors` policy issue here are some solutions.
+
+- [django-cors-headers](https://pypi.org/project/django-cors-headers/)
+
+- [proxy(create-react-app)](https://create-react-app.dev/docs/proxying-api-requests-in-development/)
+
 
 ### References
 
