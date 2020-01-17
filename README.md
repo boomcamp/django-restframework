@@ -64,7 +64,8 @@ INSTALLED_APPS = [
 ]
 ```
 
-We also need to update our source files.
+
+<h1 id="simple-orm"> We also need to update our source files</h1>.
 
 8. tutorial/languages/`models.py`.
 
