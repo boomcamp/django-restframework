@@ -1,6 +1,8 @@
-# Step-2 basic ORM
+# Object Relational Mapper(ORM)
 
 Object-relational mapping (ORM) is a programming technique in which a metadata descriptor is used to `connect object code` to a `relational database`.
+
+we already covered the simple orm from our previous tutorial we will need to add more classes and connect to each of it.
 
 1. Update tutorial/languages/`models.py` with the code below.
 
