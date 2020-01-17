@@ -1,4 +1,4 @@
-# Step-3 - Permissions
+# Permissions
 
 Django comes with a simple permissions system. It provides a way to assign permissions to specific views, users and groups of users.
 
@@ -110,7 +110,7 @@ REST_FRAMEWORK = {
 
 https://www.django-rest-framework.org/api-guide/permissions/
 
-### Next
+# Next
 
-[step4: Jason Token](https://github.com/boomcamp/django-restframework/tree/step4-jwt).
+[Json Web Token(JWT)](https://github.com/boomcamp/django-restframework/tree/step4-jwt).
 
