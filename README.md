@@ -1,8 +1,6 @@
-# Django Tutorial 1
+# Basic project set-up.
 
-Basic set up of `django` and `django restframework` using `pipenv`.
-
-Before we get started, make sure that [oipenv]( https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3) already installed in our development machines.
+Before we get started, make sure that [pipenv]( https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3) already installed in our development machines.
 
 1. Create folder `tutorial`.
 
@@ -66,7 +64,7 @@ INSTALLED_APPS = [
 ]
 ```
 
-The next steps is we're going to update our source files.
+We also need to update our source files.
 
 8. tutorial/languages/`models.py`.
 
@@ -199,7 +197,7 @@ Result : (Root page)
 
 ![Django Root page](root.png)
 
-### Next
+# Next
 
-[step2: Add basic django ORM](https://github.com/boomcamp/django-restframework/tree/step2-simple-orm)
+[Object Relational Mapper(ORM)](https://github.com/boomcamp/django-restframework/tree/step2-simple-orm)
 
