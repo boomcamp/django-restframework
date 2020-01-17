@@ -1,4 +1,4 @@
-# Step-4 - Json Web Token
+# Json Web Token(JWT)
 
 We're going to produce token's for our `api` project.
 
@@ -147,7 +147,11 @@ after sending the request you should see a response like:
 
 [Access Tokens and Refresh Tokens and ID Tokens](https://winsmarts.com/access-tokens-and-refresh-tokens-and-id-tokens-5261bc26e8a2).
 
-### Next
+### Alternatives
 
-[step5: Re-installing ](https://github.com/boomcamp/django-restframework/tree/step5-tutorial).
+[Token Authentication](https://www.django-rest-framework.org/api-guide/authentication/#tokenauthentication)
+
+# Next
+
+[How to install dependencies from existing django app](https://github.com/boomcamp/django-restframework/tree/step5-tutorial).
 
