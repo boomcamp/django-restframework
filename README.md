@@ -1,6 +1,6 @@
-# Step-5 - Re - installing packages and development dependencies from Pipfile.
+# How to install dependencies from existing django app
 
-So we are almost done with the tutorial, we will try to remove active environment and re-activate it again.
+So we are almost done with the tutorial, we will try to remove active environment and re-activate it once again.
 
 1. Remove existing environment.
 
@@ -64,7 +64,7 @@ Quit the server with CONTROL-C.
 
 [Pipenv: Python Development Workflow for Humans](https://github.com/pypa/pipenv).
 
-### Next
+# Next
 
-[step6: Rest swagger](https://github.com/boomcamp/django-restframework/tree/step6-rest-swagger).
+[The django Rest Swagger](https://github.com/boomcamp/django-restframework/tree/step6-rest-swagger).
 
