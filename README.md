@@ -1,3 +1,6 @@
+# The django Rest Swagger
+
+
 ### Pre-reading
 
 - [swagger.io](https://swagger.io/docs/specification/2-0/what-is-swagger/).
@@ -168,6 +171,6 @@ Screenshot 2
 
 https://django-rest-swagger.readthedocs.io/en/latest/
 
-### Next 
+# Next 
 
-[step7: Connecting to postgresql](https://github.com/boomcamp/django-restframework/tree/step7-docker-postgres).
+[Connecting docker postgreSQL to Django app](https://github.com/boomcamp/django-restframework/tree/step7-docker-postgres).
