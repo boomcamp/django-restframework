@@ -2,7 +2,7 @@
 
 Object-relational mapping (ORM) is a programming technique in which a metadata descriptor is used to `connect object code` to a `relational database`.
 
-we already covered the simple orm from our previous tutorial we will need to add more classes and connect to each of it.
+We already covered the [simple orm](https://github.com/boomcamp/django-restframework/blob/step1-basics/README.md#simple-orm) from our previous tutorial we will need to add more classes and connect to each of it.
 
 1. Update tutorial/languages/`models.py` with the code below.
 
@@ -167,7 +167,7 @@ Programmers
 
 
 
-### Next
+# Next
 
-[step3: Permissions](https://github.com/boomcamp/django-restframework/tree/step3-permissions)
+[Permissions](https://github.com/boomcamp/django-restframework/tree/step3-permissions)
 
