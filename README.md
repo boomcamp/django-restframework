@@ -1,4 +1,4 @@
-# Permissions
+# Django Permissions
 
 Django comes with a simple permissions system. It provides a way to assign permissions to specific views, users and groups of users.
 
