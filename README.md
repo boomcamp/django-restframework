@@ -200,5 +200,5 @@ Result : (Root page)
 
 # Next
 
-[Object Relational Mapper(ORM)](https://github.com/boomcamp/django-restframework/tree/step2-simple-orm)
+[Django Object Relational Mapper(ORM)](https://github.com/boomcamp/django-restframework/tree/step2-simple-orm)
 
