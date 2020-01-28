@@ -9,6 +9,16 @@ Before getting started make sure that you properly set-up this pre-requisites :
   - [pyenv installation](https://github.com/boomcamp/pyenv-installation) **(Only if using different python version's)**
   - [pip, pipenv and running our first django app](https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3)
   
+  
+## Steps
+- [Creating the base project, simple migration and serving our first app](https://github.com/boomcamp/django-restframework/tree/step1-basics)
+- [Django Object Relational Mapper(ORM)](https://github.com/boomcamp/django-restframework/tree/step2-simple-orm)
+- [Django Permissions](https://github.com/boomcamp/django-restframework/tree/step3-permissions)
+- [Generating Jason Web Tokens(JWT)](https://github.com/boomcamp/django-restframework/tree/step4-jwt)
+- [Re activating our existing virtual environment](https://github.com/boomcamp/django-restframework/tree/step5-tutorial)
+- [Documenting api with Rest Swagger](https://github.com/boomcamp/django-restframework/tree/step6-rest-swagger)
+- [Connecting to PostgreSQL with Docker](https://github.com/boomcamp/django-restframework/tree/step7-docker-postgres)
+
 
 
 <h3 id="resources">Video references</h1>
@@ -20,13 +30,3 @@ Before getting started make sure that you properly set-up this pre-requisites :
 
 - [JSON Web Tokens With Django REST Framework](https://www.youtube.com/watch?v=Fhcn2qx-4VQ)
 
-
-
-### Steps
-- [Creating the base project, simple migration and serving our first app](https://github.com/boomcamp/django-restframework/tree/step1-basics)
-- [Django Object Relational Mapper(ORM)](https://github.com/boomcamp/django-restframework/tree/step2-simple-orm)
-- [Django Permissions](https://github.com/boomcamp/django-restframework/tree/step3-permissions)
-- [Generating Jason Web Tokens(JWT)](https://github.com/boomcamp/django-restframework/tree/step4-jwt)
-- [Re activating our existing virtual environment](https://github.com/boomcamp/django-restframework/tree/step5-tutorial)
-- [Documenting api with Rest Swagger](https://github.com/boomcamp/django-restframework/tree/step6-rest-swagger)
-- [Connecting to PostgreSQL with Docker](https://github.com/boomcamp/django-restframework/tree/step7-docker-postgres)
