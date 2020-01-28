@@ -173,4 +173,4 @@ https://django-rest-swagger.readthedocs.io/en/latest/
 
 # Next 
 
-[Connecting docker postgreSQL to Django app](https://github.com/boomcamp/django-restframework/tree/step7-docker-postgres).
+[Connecting to PostgreSQL with Docker](https://github.com/boomcamp/django-restframework/tree/step7-docker-postgres).
