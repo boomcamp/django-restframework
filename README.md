@@ -1,4 +1,4 @@
-# Json Web Token(JWT)
+# Generating Jason Web Tokens(JWT)
 
 We're going to produce token's for our `api` project.
 
