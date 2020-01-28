@@ -1,4 +1,4 @@
-# Basic project set-up.
+# Creating the base project, simple migration and serving our first app.
 
 Before we get started, make sure that [pipenv]( https://github.com/boomcamp/setup-pip-pipenv-django-admin-python3) already installed in our development machines.
 
