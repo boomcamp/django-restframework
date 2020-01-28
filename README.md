@@ -13,8 +13,11 @@ Before getting started make sure that you properly set-up this pre-requisites :
 
 <h3 id="resources">Video references</h1>
 - [Getting Started With Django REST Framework](https://www.youtube.com/watch?v=263xt_4mBNc)
+
 - [Django REST Framework Model Relationships](https://www.youtube.com/watch?v=QB9gGEwxxM4)
+
 - [How to Use Django REST Framework Permissions](https://www.youtube.com/watch?v=yiYpFMk9QdA)
+
 - [JSON Web Tokens With Django REST Framework](https://www.youtube.com/watch?v=Fhcn2qx-4VQ)
 
 
