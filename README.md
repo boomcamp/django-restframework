@@ -1,4 +1,4 @@
-# Django Permissions
+# Generating Jason Web Tokens(JWT)
 
 Django comes with a simple permissions system. It provides a way to assign permissions to specific views, users and groups of users.
 
