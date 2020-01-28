@@ -153,5 +153,5 @@ after sending the request you should see a response like:
 
 # Next
 
-[How to install dependencies from existing django app](https://github.com/boomcamp/django-restframework/tree/step5-tutorial).
+[Re activating our existing virtual environment](https://github.com/boomcamp/django-restframework/tree/step5-tutorial)
 
