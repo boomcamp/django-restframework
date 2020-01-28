@@ -1,4 +1,4 @@
-# How to install dependencies from existing django app
+# Re activating our existing virtual environment
 
 So we are almost done with the tutorial, we will try to remove active environment and re-activate it once again.
 
