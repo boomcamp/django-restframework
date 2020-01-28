@@ -1,4 +1,4 @@
-# Connecting docker postgreSQL to Django app
+# Connecting to PostgreSQL with Docker
 
 This is just the same on how you connect node to docker in your `frontend-course`.
 
