@@ -1,4 +1,4 @@
-# Object Relational Mapper(ORM)
+# Django Object Relational Mapper(ORM)
 
 Object-relational mapping (ORM) is a programming technique in which a metadata descriptor is used to `connect object code` to a `relational database`.
 
