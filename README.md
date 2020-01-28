@@ -66,5 +66,5 @@ Quit the server with CONTROL-C.
 
 # Next
 
-[The django Rest Swagger](https://github.com/boomcamp/django-restframework/tree/step6-rest-swagger).
+[Documenting api with Rest Swagger](https://github.com/boomcamp/django-restframework/tree/step6-rest-swagger)
 
