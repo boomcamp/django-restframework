@@ -11,6 +11,7 @@ Before getting started make sure that you properly set-up this pre-requisites :
   
   
 ## Steps
+
 - [Creating the base project, simple migration and serving our first app](https://github.com/boomcamp/django-restframework/tree/step1-basics)
 - [Django Object Relational Mapper(ORM)](https://github.com/boomcamp/django-restframework/tree/step2-simple-orm)
 - [Django Permissions](https://github.com/boomcamp/django-restframework/tree/step3-permissions)
@@ -22,11 +23,12 @@ Before getting started make sure that you properly set-up this pre-requisites :
 
 
 <h3 id="resources">Video references</h1>
-- [Getting Started With Django REST Framework](https://www.youtube.com/watch?v=263xt_4mBNc)
 
-- [Django REST Framework Model Relationships](https://www.youtube.com/watch?v=QB9gGEwxxM4)
+[Getting Started With Django REST Framework](https://www.youtube.com/watch?v=263xt_4mBNc)
 
-- [How to Use Django REST Framework Permissions](https://www.youtube.com/watch?v=yiYpFMk9QdA)
+[Django REST Framework Model Relationships](https://www.youtube.com/watch?v=QB9gGEwxxM4)
 
-- [JSON Web Tokens With Django REST Framework](https://www.youtube.com/watch?v=Fhcn2qx-4VQ)
+[How to Use Django REST Framework Permissions](https://www.youtube.com/watch?v=yiYpFMk9QdA)
+
+[JSON Web Tokens With Django REST Framework](https://www.youtube.com/watch?v=Fhcn2qx-4VQ)
 
