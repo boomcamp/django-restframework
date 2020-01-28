@@ -169,5 +169,5 @@ Programmers
 
 # Next
 
-[Permissions](https://github.com/boomcamp/django-restframework/tree/step3-permissions)
+[Django Permissions](https://github.com/boomcamp/django-restframework/tree/step3-permissions)
 
