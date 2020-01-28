@@ -112,5 +112,5 @@ https://www.django-rest-framework.org/api-guide/permissions/
 
 # Next
 
-[Json Web Token(JWT)](https://github.com/boomcamp/django-restframework/tree/step4-jwt).
+[Generating Jason Web Tokens(JWT)](https://github.com/boomcamp/django-restframework/tree/step4-jwt)
 
