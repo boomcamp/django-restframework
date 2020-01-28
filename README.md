@@ -1,4 +1,4 @@
-# The django Rest Swagger
+# Documenting api with Rest Swagger
 
 
 ### Pre-reading
